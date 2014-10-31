@@ -1,0 +1,739 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Medica\n"
+"POT-Creation-Date: 2014-07-29 21:13+0200\n"
+"PO-Revision-Date: 2014-07-29 21:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: ThemeIsle <friends@themeisle.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16
+msgid "404 ERROR"
+msgstr ""
+
+#: ../404.php:32
+msgid "The page does not exist"
+msgstr ""
+
+#: ../404.php:41
+msgid ""
+"Oops, I screwed up and you discovered my fatal flaw. Well, we're not all "
+"perfect, but we try. Can you try this again or maybe visit our <a href=\""
+msgstr ""
+
+#: ../archive.php:18 ../archive.php:20
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../archive.php:22
+#, php-format
+msgid "%s."
+msgstr ""
+
+#: ../archive.php:50 ../index.php:34 ../page-blog.php:45 ../search.php:34
+#: ../single.php:32
+msgid "- Posted by:"
+msgstr ""
+
+#: ../archive.php:50 ../index.php:34 ../page-blog.php:45 ../search.php:34
+#: ../single.php:32
+msgid "- In category:"
+msgstr ""
+
+#: ../archive.php:50 ../index.php:34 ../page-blog.php:45 ../search.php:34
+#: ../single.php:32
+msgid "-"
+msgstr ""
+
+#: ../archive.php:63 ../archive.php:64 ../index.php:47 ../index.php:48
+#: ../page-blog.php:58 ../page-blog.php:59 ../search.php:47 ../search.php:48
+msgid "Read More"
+msgstr ""
+
+#: ../archive.php:70 ../front-page.php:203 ../front-page.php:247
+#: ../front-page.php:335 ../index.php:54 ../page-blog.php:65
+#: ../page-contact.php:78 ../page-doctors.php:91 ../page.php:40
+#: ../search.php:54 ../single-doctors.php:99 ../single.php:63
+#: ../taxonomy-services.php:46
+msgid "No posts found"
+msgstr ""
+
+#: ../comments.php:31 ../comments.php:48
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:32 ../comments.php:49
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:33 ../comments.php:50
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: ../footer.php:58 ../header.php:85
+msgid "Home"
+msgstr ""
+
+#: ../front-page.php:43 ../front-page.php:72 ../front-page.php:101
+#: ../front-page.php:130 ../header.php:160 ../header.php:177 ../header.php:195
+#: ../header.php:213 ../header.php:231
+msgid "Go to Appearance - Customize, to add content."
+msgstr ""
+
+#: ../front-page.php:154
+msgid "Latest News"
+msgstr ""
+
+#: ../front-page.php:216 ../functions.php:101
+#: ../includes/custom-widgets.php:203 ../includes/custom-widgets.php:279
+msgid "Testimonials"
+msgstr ""
+
+#: ../front-page.php:265 ../includes/custom-widgets.php:19
+#: ../includes/custom-widgets.php:91
+msgid "Our Doctors"
+msgstr ""
+
+#: ../functions.php:48
+msgid "This menu will appear in header."
+msgstr ""
+
+#: ../functions.php:61
+msgid "This menu will appear in footer."
+msgstr ""
+
+#: ../functions.php:81
+msgid "General Sidebar"
+msgstr ""
+
+#: ../functions.php:82
+msgid ""
+"Use this sidebar to display widgets in your website, including posts and "
+"pages."
+msgstr ""
+
+#: ../functions.php:102
+msgid "Parent Testimonial:"
+msgstr ""
+
+#: ../functions.php:103
+msgid "All Testimonials"
+msgstr ""
+
+#: ../functions.php:104
+msgid "View Testimonial"
+msgstr ""
+
+#: ../functions.php:105 ../functions.php:106
+msgid "Add New Testimonial"
+msgstr ""
+
+#: ../functions.php:107
+msgid "Edit Testimonial"
+msgstr ""
+
+#: ../functions.php:108
+msgid "Update Testimonial"
+msgstr ""
+
+#: ../functions.php:109
+msgid "Search Testimonial"
+msgstr ""
+
+#: ../functions.php:110
+msgid "Not found Testimonial"
+msgstr ""
+
+#: ../functions.php:111
+msgid "Not found Testimonial in Trash"
+msgstr ""
+
+#: ../functions.php:114
+msgid "testimonials"
+msgstr ""
+
+#: ../functions.php:115
+msgid "Description for testimonials."
+msgstr ""
+
+#: ../functions.php:146
+msgid "Doctors"
+msgstr ""
+
+#: ../functions.php:147
+msgid "Parent Doctor:"
+msgstr ""
+
+#: ../functions.php:148
+msgid "All Doctors"
+msgstr ""
+
+#: ../functions.php:149
+msgid "View Doctor"
+msgstr ""
+
+#: ../functions.php:150 ../functions.php:151
+msgid "Add New Doctor"
+msgstr ""
+
+#: ../functions.php:152
+msgid "Edit Doctor"
+msgstr ""
+
+#: ../functions.php:153
+msgid "Update Doctor"
+msgstr ""
+
+#: ../functions.php:154
+msgid "Search Doctor"
+msgstr ""
+
+#: ../functions.php:155
+msgid "Not found Doctor"
+msgstr ""
+
+#: ../functions.php:156
+msgid "Not found Doctor in Trash"
+msgstr ""
+
+#: ../functions.php:159
+msgid "doctors"
+msgstr ""
+
+#: ../functions.php:160
+msgid "Description for doctors."
+msgstr ""
+
+#: ../functions.php:191
+msgid "Search Services"
+msgstr ""
+
+#: ../functions.php:192
+msgid "All Services"
+msgstr ""
+
+#: ../functions.php:193
+msgid "Parent Service"
+msgstr ""
+
+#: ../functions.php:194
+msgid "Parent Service:"
+msgstr ""
+
+#: ../functions.php:195
+msgid "Edit Service"
+msgstr ""
+
+#: ../functions.php:196
+msgid "Update Service"
+msgstr ""
+
+#: ../functions.php:197
+msgid "Add New Service"
+msgstr ""
+
+#: ../functions.php:198
+msgid "New Service"
+msgstr ""
+
+#: ../functions.php:199 ../includes/custom-widgets.php:125
+#: ../includes/custom-widgets.php:175
+msgid "Services"
+msgstr ""
+
+#: ../index.php:12 ../single.php:12
+msgid "Blog"
+msgstr ""
+
+#: ../sidebar.php:14
+msgid "The sidebar is not active."
+msgstr ""
+
+#: ../single-doctors.php:5
+msgid "Our Doctor"
+msgstr ""
+
+#: ../single-doctors.php:51
+msgid "Speciality"
+msgstr ""
+
+#: ../single-doctors.php:58
+msgid "Education"
+msgstr ""
+
+#: ../single-doctors.php:65
+msgid "Work"
+msgstr ""
+
+#: ../single.php:45
+msgid "Pages:"
+msgstr ""
+
+#: ../taxonomy-services.php:41
+msgid "Read more"
+msgstr ""
+
+#: ../includes/custom-functions.php:49
+msgid "Pingback:"
+msgstr ""
+
+#: ../includes/custom-functions.php:49
+msgid "(Edit)"
+msgstr ""
+
+#: ../includes/custom-functions.php:59
+#, php-format
+msgid "<span>%s</span>"
+msgstr ""
+
+#: ../includes/custom-functions.php:62
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../includes/custom-functions.php:65
+msgid "Edit"
+msgstr ""
+
+#: ../includes/custom-functions.php:71
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../includes/custom-widgets.php:15
+msgid "A widget that displays the latest doctors."
+msgstr ""
+
+#: ../includes/custom-widgets.php:66 ../includes/custom-widgets.php:249
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: ../includes/custom-widgets.php:91
+msgid "4"
+msgstr ""
+
+#: ../includes/custom-widgets.php:95 ../includes/custom-widgets.php:179
+#: ../includes/custom-widgets.php:283 ../includes/customizer.php:670
+msgid "Title:"
+msgstr ""
+
+#: ../includes/custom-widgets.php:100
+msgid "Number of posts:"
+msgstr ""
+
+#: ../includes/custom-widgets.php:121
+msgid "A widget that displays the Services."
+msgstr ""
+
+#: ../includes/custom-widgets.php:199
+msgid "A widget that displays the latest testimonials."
+msgstr ""
+
+#: ../includes/custom-widgets.php:279
+msgid "2"
+msgstr ""
+
+#: ../includes/custom-widgets.php:288
+msgid "Number of testimonials:"
+msgstr ""
+
+#: ../includes/customizer.php:13
+msgid "Socials Icon - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:20
+msgid "Facebook - Link:"
+msgstr ""
+
+#: ../includes/customizer.php:29
+msgid "Twitter - Link:"
+msgstr ""
+
+#: ../includes/customizer.php:38
+msgid "YouTube - Link:"
+msgstr ""
+
+#: ../includes/customizer.php:47
+msgid "LinkedIn - Link:"
+msgstr ""
+
+#: ../includes/customizer.php:57
+msgid "Contact - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:64
+msgid "Telephone - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:73
+msgid "Telephone - Number:"
+msgstr ""
+
+#: ../includes/customizer.php:82
+msgid "Contact Address - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:91
+msgid "Contact Address - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:103
+msgid "Header - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:110
+msgid "Hader - Logo:"
+msgstr ""
+
+#: ../includes/customizer.php:120
+msgid "Subheader - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:127
+msgid "Subheader - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:136
+msgid "Subheader - Content"
+msgstr ""
+
+#: ../includes/customizer.php:147
+msgid "Subheader - Button Text:"
+msgstr ""
+
+#: ../includes/customizer.php:156
+msgid "Subheader - Button Link:"
+msgstr ""
+
+#: ../includes/customizer.php:166
+msgid "Frontpage - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:173
+msgid "Contact Form 7 - Shortcode:"
+msgstr ""
+
+#: ../includes/customizer.php:184
+msgid "Contact Form 7 - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:193
+msgid "Article - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:202 ../includes/customizer.php:346
+msgid "Article - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:213 ../includes/customizer.php:366
+msgid "Box 1 - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:222 ../includes/customizer.php:375
+msgid "Box 1 - Title Link:"
+msgstr ""
+
+#: ../includes/customizer.php:231 ../includes/customizer.php:384
+msgid "Box 1 - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:242 ../includes/customizer.php:404
+msgid "Box 2 - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:251 ../includes/customizer.php:413
+msgid "Box 2 - Title Link:"
+msgstr ""
+
+#: ../includes/customizer.php:260 ../includes/customizer.php:422
+msgid "Box 2 - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:271 ../includes/customizer.php:442
+msgid "Box 3 - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:280 ../includes/customizer.php:451
+msgid "Box 3 - Title Link:"
+msgstr ""
+
+#: ../includes/customizer.php:289 ../includes/customizer.php:460
+msgid "Box 3 - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:300 ../includes/customizer.php:480
+msgid "Box 4 - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:309 ../includes/customizer.php:489
+msgid "Box 4 - Title Link:"
+msgstr ""
+
+#: ../includes/customizer.php:318 ../includes/customizer.php:498
+msgid "Box 4 - Content:"
+msgstr ""
+
+#: ../includes/customizer.php:330
+msgid "Features - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:337
+msgid "Articles - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:357
+msgid "Box 1 - Image:"
+msgstr ""
+
+#: ../includes/customizer.php:395
+msgid "Box 2 - Image:"
+msgstr ""
+
+#: ../includes/customizer.php:433
+msgid "Box 3 - Image:"
+msgstr ""
+
+#: ../includes/customizer.php:471
+msgid "Box 4 - Image:"
+msgstr ""
+
+#: ../includes/customizer.php:509
+msgid "Button - Text:"
+msgstr ""
+
+#: ../includes/customizer.php:518
+msgid "Button - Link:"
+msgstr ""
+
+#: ../includes/customizer.php:528
+msgid "Content - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:535
+msgid "Latest News - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:544
+msgid "Latest News - Number of articles:"
+msgstr ""
+
+#: ../includes/customizer.php:553
+msgid "Testimonials - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:562
+msgid "Testimonials - Number of articles:"
+msgstr ""
+
+#: ../includes/customizer.php:571
+msgid "Our Doctors - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:581
+msgid "Footer - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:588
+msgid "About Us - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:597
+msgid "About Us - Image:"
+msgstr ""
+
+#: ../includes/customizer.php:606
+msgid "About Us - Content"
+msgstr ""
+
+#: ../includes/customizer.php:617
+msgid "Menu - Title:"
+msgstr ""
+
+#: ../includes/customizer.php:627
+msgid "Doctors Page - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:634
+msgid "Articles - Number of posts:"
+msgstr ""
+
+#: ../includes/customizer.php:644
+msgid "Contact Page - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:651
+msgid "Map - Code:"
+msgstr ""
+
+#: ../includes/customizer.php:663
+msgid "404 Page - Settings:"
+msgstr ""
+
+#: ../includes/customizer.php:679
+msgid "Subtitle:"
+msgstr ""
+
+#: ../includes/customizer.php:688
+msgid "Content:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:25
+msgid "Testimonials - Details"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:32
+msgid "Company Name:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:33
+msgid ""
+"Type the company name (example: ThemeIsle, L.L.C., Google L.L.C., etc.)."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:42
+msgid "Doctors - Details"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:49
+msgid "Facebook link:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:50
+msgid "Type your Facebook address."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:55
+msgid "Twitter link:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:56
+msgid "Type your Twitter address."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:61
+msgid "Skype link:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:62
+msgid "Type your Skype address."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:67
+msgid "LinkedIn link:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:68
+msgid "Type your LinkedIn address."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:73
+msgid "Speciality:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:74
+msgid "Your speciality."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:79
+msgid "Education:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:80
+msgid "Your education."
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:85
+msgid "Work:"
+msgstr ""
+
+#: ../includes/metaboxes/example-functions.php:86
+msgid "Your work."
+msgstr ""
+
+#: ../includes/metaboxes/init.php:251
+msgid "Clear"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:252
+msgid "Default"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:253
+msgid "Select Color"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:254
+msgid "Current Color"
+msgstr ""
+
+#: ../includes/metaboxes/init.php:1155
+msgid "Save"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
+msgid "Please Try Again"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
+msgid "Remove Embed"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_field.php:449
+msgid "Add Group"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_field.php:450
+msgid "Remove Group"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:249
+msgid "Add Row"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:305
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:705
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:765
+msgid "Remove"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:600
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:634
+msgid "No terms"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:673
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:727
+msgid "Add or Upload File"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:694
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:757
+msgid "Remove Image"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:705
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:765
+msgid "File:"
+msgstr ""
+
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:705
+#: ../includes/metaboxes/helpers/cmb_Meta_Box_types.php:765
+msgid "Download"
+msgstr ""
