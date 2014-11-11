@@ -11,7 +11,7 @@ if ( is_dynamic_sidebar( 'general-sidebar' ) ) {
 	dynamic_sidebar( 'general-sidebar' );
 } else {
 	echo '<div class="widget">';
-	_e( 'The sidebar is not active.', 'ti' );
+	_e( 'The sidebar is not active.', 'medica_lite' );
 	echo '</div>';
 }
 ?>

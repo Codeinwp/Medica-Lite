@@ -55,7 +55,7 @@
 							} else {
 
 								echo '<ul id="menu-footer">';
-								echo '<li><a href="'. home_url() .'" title="'. __( 'Home', 'ti' ) .'">'. __( 'Home', 'ti' ) .'</a></li>';
+								echo '<li><a href="'. home_url() .'" title="'. __( 'Home', 'medica_lite' ) .'">'. __( 'Home', 'medica_lite' ) .'</a></li>';
 								wp_list_pages( array(
 										'title_li'	=> '',
 									)
@@ -109,7 +109,7 @@
 			</div><!--/div .wrapper-->
 			<div class="copyright-name">
 				<div class="wrapper">
-					<?php _e( 'Medica &copy; 2014 All rights reserved', 'ti' ); ?>
+					<?php _e( 'Medica &copy; 2014 All rights reserved', 'medica_lite' ); ?>
 				</div><!--/div .wrapper-->
 			</div><!-- /div .copyright-name -->
 		</footer><!--/footer #footer-->

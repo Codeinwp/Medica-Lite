@@ -37,7 +37,7 @@
 
 						<?php }
 					} else {
-						_e( 'No posts found', 'ti' );
+						_e( 'No posts found', 'medica_lite' );
 					}
 
 					?>

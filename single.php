@@ -9,7 +9,7 @@
 			<div class="wide-nav">
 				<div class="wrapper">
 					<h3>
-						<?php _e( 'Blog', 'ti' ); ?>
+						<?php _e( 'Blog', 'medica_lite' ); ?>
 					</h3><!--/h3-->
 				</div><!--/div .wrapper-->
 			</div><!--/div .wide-nav-->
@@ -29,7 +29,7 @@
 								</h3><!--/h3 .post-title-->
 								<div class="post-meta">
 									<span>
-										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'ti' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'ti' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'ti' ); ?> <a href="#comments-template" title="<?php comments_number( 'No responses', 'One comment', '% comments' ); ?>"><?php comments_number( 'No responses', 'One comment', '% comments' ); ?></a>
+										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( 'No responses', 'One comment', '% comments' ); ?>"><?php comments_number( 'No responses', 'One comment', '% comments' ); ?></a>
 									</span><!--/span-->
 								</div><!--/div .post-meta-->
 								<?php
@@ -42,7 +42,7 @@
 								</div><!--/div .post-excerpt-->
 								<?php
 									wp_link_pages( array(
-										'before'      => '<div class="post-links"><span class="post-links-title">' . __( 'Pages:', 'ti' ) . '</span>',
+										'before'      => '<div class="post-links"><span class="post-links-title">' . __( 'Pages:', 'medica_lite' ) . '</span>',
 										'after'       => '</div>',
 										'link_before' => '<span>',
 										'link_after'  => '</span>',
@@ -60,7 +60,7 @@
 
 						<?php }
 					} else {
-						_e( 'No posts found', 'ti' );
+						_e( 'No posts found', 'medica_lite' );
 					}
 
 					?>

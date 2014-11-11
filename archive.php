@@ -15,11 +15,11 @@
 					$search_archive = get_search_query();
 
 					if ( is_day() ) {
-						printf( __( '%s', 'ti' ), get_the_date() );
+						printf( __( '%s', 'medica_lite' ), get_the_date() );
 					} elseif ( is_month() ) {
-						printf( __( '%s', 'ti' ), get_the_date( _x( 'F Y', '', 'ti' ) ) );
+						printf( __( '%s', 'medica_lite' ), get_the_date( _x( 'F Y', '', 'medica_lite' ) ) );
 					} elseif ( is_year() ) {
-						printf( __( '%s.', 'ti' ), get_the_date( _x( 'Y', '', 'ti' ) ) );
+						printf( __( '%s.', 'medica_lite' ), get_the_date( _x( 'Y', '', 'medica_lite' ) ) );
 					} elseif ( is_category() ) {
 						echo single_cat_title();
 					} elseif ( is_author() ) {
@@ -49,7 +49,7 @@
 								</h3><!--/h3 .post-title-->
 								<div class="post-meta">
 									<span>
-										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'ti' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'ti' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'ti' ); ?> <a href="#comments-template" title="<?php comments_number( 'No responses', 'One comment', '% comments' ); ?>"><?php comments_number( 'No responses', 'One comment', '% comments' ); ?></a>
+										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( 'No responses', 'One comment', '% comments' ); ?>"><?php comments_number( 'No responses', 'One comment', '% comments' ); ?></a>
 									</span><!--/span-->
 								</div><!--/div .post-meta-->
 
@@ -62,21 +62,21 @@
 								<div class="post-excerpt">
 									<?php the_excerpt(); ?>
 								</div><!--/div .post-excerpt-->
-								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'ti' ); ?>" class="read-more">
-									<span><?php _e( 'Read More', 'ti' ); ?></span>
+								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'medica_lite' ); ?>" class="read-more">
+									<span><?php _e( 'Read More', 'medica_lite' ); ?></span>
 								</a><!--/a .read-more-->
 							</div><!--/div .post-->
 
 						<?php }
 					} else {
-						_e( 'No posts found', 'ti' );
+						_e( 'No posts found', 'medica_lite' );
 					}
 
 					?>
 
 					<div class="posts-navigation">
-						<?php next_posts_link(esc_attr__( 'Prev', 'ti' )); ?>
-						<?php previous_posts_link(esc_attr__( 'Next', 'ti' )); ?>
+						<?php next_posts_link(esc_attr__( 'Prev', 'medica_lite' )); ?>
+						<?php previous_posts_link(esc_attr__( 'Next', 'medica_lite' )); ?>
 					</div><!--/div .posts-navigation-->
 				</div><!--/div #posts-->
 				<?php get_sidebar(); ?>

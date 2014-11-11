@@ -43,7 +43,7 @@
 								</h3><!--/h3 .post-title-->
 								<div class="post-meta">
 									<span>
-										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'ti' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'ti' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'ti' ); ?> <a href="#comments-template" title="<?php comments_number( 'No responses', 'One comment', '% comments' ); ?>"><?php comments_number( 'No responses', 'One comment', '% comments' ); ?></a>
+										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( 'No responses', 'One comment', '% comments' ); ?>"><?php comments_number( 'No responses', 'One comment', '% comments' ); ?></a>
 									</span><!--/span-->
 								</div><!--/div .post-meta-->
 
@@ -56,14 +56,14 @@
 								<div class="post-excerpt">
 									<?php the_excerpt(); ?>
 								</div><!--/div .post-excerpt-->
-								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'ti' ); ?>" class="read-more">
-									<span><?php _e( 'Read More', 'ti' ); ?></span>
+								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'medica_lite' ); ?>" class="read-more">
+									<span><?php _e( 'Read More', 'medica_lite' ); ?></span>
 								</a><!--/a .read-more-->
 							</div><!--/div .post-->
 
 						<?php }
 					} else {
-						_e( 'No posts found', 'ti' );
+						_e( 'No posts found', 'medica_lite' );
 					}
 
 					wp_reset_postdata();
@@ -72,7 +72,7 @@
 
 					<div class="posts-navigation">
 						<?php next_posts_link( 'Prev', $wp_query->max_num_pages ); ?>
-						<?php previous_posts_link(esc_attr__( 'Next', 'ti' )); ?>
+						<?php previous_posts_link(esc_attr__( 'Next', 'medica_lite' )); ?>
 					</div><!--/div .posts-navigation-->
 				</div><!--/div #posts-->
 				<?php get_sidebar(); ?>

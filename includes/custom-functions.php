@@ -3,50 +3,50 @@
 /**
  *	Posts Link Attributes Prev
  */
-function posts_link_attributes_prev() {
+function medica_lite_posts_link_attributes_prev() {
     return 'class="left-navigation"';
 }
-add_filter('next_posts_link_attributes', 'posts_link_attributes_prev');
+add_filter('next_posts_link_attributes', 'medica_lite_posts_link_attributes_prev');
 
 /**
  *	Posts Link Attributes Next
  */
-function posts_link_attributes_next() {
+function medica_lite_posts_link_attributes_next() {
     return 'class="right-navigation"';
 }
-add_filter('previous_posts_link_attributes', 'posts_link_attributes_next');
+add_filter('previous_posts_link_attributes', 'medica_lite_posts_link_attributes_next');
 
 /**
  *	Posts Link Next Class
  */
-function posts_link_next_class($format){
+function medica_lite_posts_link_next_class($format){
      $format = str_replace('href=', 'class="next-post" href=', $format);
      return $format;
 }
-add_filter('next_post_link', 'posts_link_next_class');
+add_filter('next_post_link', 'medica_lite_posts_link_next_class');
 
 /**
  *	Posts Link Prev Class
  */
-function posts_link_prev_class($format) {
+function medica_lite_posts_link_prev_class($format) {
      $format = str_replace('href=', 'class="previous-post" href=', $format);
      return $format;
 }
-add_filter('previous_post_link', 'posts_link_prev_class');
+add_filter('previous_post_link', 'medica_lite_posts_link_prev_class');
 
 /**
  *	Comments
  */
-if ( ! function_exists( 'comments' ) ) :
+if ( ! function_exists( 'medica_lite_comments' ) ) :
 
-function comments( $comment, $args, $depth ) {
+function medica_lite_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
         case 'pingback' :
         case 'trackback' :
     ?>
     <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'shape' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'shape' ), ' ' ); ?></p>
+        <p><?php _e( 'Pingback:', 'denta_lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'denta_lite' ), ' ' ); ?></p>
     <?php
             break;
         default :
@@ -56,19 +56,19 @@ function comments( $comment, $args, $depth ) {
             <?php echo get_avatar( $comment, 120 ); ?>
             <div class="comment-entry">
                 <div class="comment-entry-head">
-                    <?php printf( __( '<span>%s</span>', 'shape' ), sprintf( '%s', get_comment_author_link() ) ); ?> -
+                    <?php printf( __( '<span>%s</span>', 'denta_lite' ), sprintf( '%s', get_comment_author_link() ) ); ?> -
                     <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" class="comment-entry-head-date">
                         <time pubdate datetime="<?php comment_time( 'c' ); ?>">
-                            <?php printf( __( '%1$s at %2$s', 'shape' ), get_comment_date(), get_comment_time() ); ?>
+                            <?php printf( __( '%1$s at %2$s', 'denta_lite' ), get_comment_date(), get_comment_time() ); ?>
                         </time>
                     </a><!--/a .comment-entry-head-date-->
-                    <?php edit_comment_link( __( 'Edit', 'shape' ), '- ' ); ?>
+                    <?php edit_comment_link( __( 'Edit', 'denta_lite' ), '- ' ); ?>
                 </div><!--/div .comment-entry-head-->
                 <div class="comment-entry-content">
                     <?php comment_text(); ?>
                 </div><!--/div .comment-entry-content-->
                 <?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em class="awaiting-moderation cf"><?php _e( 'Your comment is awaiting moderation.', 'shape' ); ?></em><br />
+                    <em class="awaiting-moderation cf"><?php _e( 'Your comment is awaiting moderation.', 'denta_lite' ); ?></em><br />
                 <?php endif; ?>
                 <div class="coment-reply-link-div cf">
                     <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
@@ -85,8 +85,8 @@ endif;
 /**
  *  Post Gallery
  */
-add_filter('post_gallery', 'my_post_gallery', 10, 2);
-function my_post_gallery($output, $attr) {
+add_filter('post_gallery', 'medica_lite_post_gallery', 10, 2);
+function medica_lite_post_gallery($output, $attr) {
     global $post;
 
     if (isset($attr['orderby'])) {

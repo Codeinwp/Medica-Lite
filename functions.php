@@ -9,7 +9,7 @@ require_once ( 'includes/customizer.php' );
 /**
  *  WP Title
  */
-function ti_wp_title( $title, $sep ) {
+function medica_lite_wp_title( $title, $sep ) {
     global $paged, $page;
 
     if ( is_feed() )
@@ -29,7 +29,7 @@ function ti_wp_title( $title, $sep ) {
 
     return $title;
 }
-add_filter( 'wp_title', 'ti_wp_title', 10, 2 );
+add_filter( 'wp_title', 'medica_lite_wp_title', 10, 2 );
 
 /**
  *  Content Width
@@ -39,7 +39,7 @@ if ( ! isset( $content_width ) ) $content_width = 634;
 /**
  *	WP Enqueue Style Medica
  */
-function wp_enqueue_style_medica() {
+function medica_lite_wp_enqueue_style_medica() {
 
     wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.3' );
     wp_enqueue_style( 'font-family-raleway', 'http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900', array(), '1.0' );
@@ -52,45 +52,45 @@ function wp_enqueue_style_medica() {
     }
 
 }
-add_action( 'wp_enqueue_scripts', 'wp_enqueue_style_medica' );
+add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_style_medica' );
 
 /**
  *	WP Enqueue Scripts Medica
  */
-function wp_enqueue_scripts_medica() {
+function medica_lite_wp_enqueue_scripts_medica() {
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'carouFredSel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ), '6.2.1', true );
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/jquery.masonry.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts_medica' );
+add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_scripts_medica' );
 
 /**
  *	Header Navigation
  */
-function header_navigation() {
+function medica_lite_header_navigation() {
 
 	$locations = array(
-		'header-navigation' => __( 'This menu will appear in header.', 'ti' ),
+		'header-navigation' => __( 'This menu will appear in header.', 'denta_lite' ),
 	);
 	register_nav_menus( $locations );
 
 }
-add_action( 'init', 'header_navigation' );
+add_action( 'init', 'medica_lite_header_navigation' );
 
 /**
  *  Footer Navigation
  */
-function footer_navigation() {
+function medica_lite_footer_navigation() {
 
     $locations = array(
-        'footer-navigation' => __( 'This menu will appear in footer.', 'ti' ),
+        'footer-navigation' => __( 'This menu will appear in footer.', 'denta_lite' ),
     );
     register_nav_menus( $locations );
 
 }
-add_action( 'init', 'footer_navigation' );
+add_action( 'init', 'medica_lite_footer_navigation' );
 
 /**
  *	Add Theme Support
@@ -128,12 +128,12 @@ the_post_thumbnail();
 /**
  *  General Sidebar
  */
-function general_sidebar() {
+function medica_lite_general_sidebar() {
 
     $args = array(
         'id'            => 'general-sidebar',
-        'name'          => __( 'General Sidebar', 'ti' ),
-        'description'   => __( 'Use this sidebar to display widgets in your website, including posts and pages.', 'ti' ),
+        'name'          => __( 'General Sidebar', 'denta_lite' ),
+        'description'   => __( 'Use this sidebar to display widgets in your website, including posts and pages.', 'denta_lite' ),
         'before_title'  => '<div class="title-widget">',
         'after_title'   => '</div>',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -142,4 +142,4 @@ function general_sidebar() {
     register_sidebar( $args );
 
 }
-add_action( 'widgets_init', 'general_sidebar' );
+add_action( 'widgets_init', 'medica_lite_general_sidebar' );

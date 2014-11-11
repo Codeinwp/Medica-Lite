@@ -5,7 +5,7 @@ function check_number( $value ) {
     return ( 0 < $value ) ? $value : null;
 }
 
-function ti_medica_customizer( $wp_customize ) {
+function medica_lite_medica_customizer( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -539,7 +539,7 @@ function ti_medica_customizer( $wp_customize ) {
 
 
 }
-add_action( 'customize_register', 'ti_medica_customizer' );
+add_action( 'customize_register', 'medica_lite_medica_customizer' );
 
 if( class_exists( 'WP_Customize_Control' ) ):
 	class Example_Customize_Textarea_Control extends WP_Customize_Control {

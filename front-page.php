@@ -60,7 +60,7 @@
 									if ( get_theme_mod( 'ti_features_box1_content' ) ) {
 										echo '<p>'. get_theme_mod( 'ti_features_box1_content' ) .'</p>';
 									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'ti' ) .'</p>';
+										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
@@ -107,7 +107,7 @@
 									if ( get_theme_mod( 'ti_features_box2_content' ) ) {
 										echo '<p>'. get_theme_mod( 'ti_features_box2_content' ) .'</p>';
 									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'ti' ) .'</p>';
+										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
@@ -154,7 +154,7 @@
 									if ( get_theme_mod( 'ti_features_box3_content' ) ) {
 										echo '<p>'. get_theme_mod( 'ti_features_box3_content' ) .'</p>';
 									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'ti' ) .'</p>';
+										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
@@ -201,7 +201,7 @@
 									if ( get_theme_mod( 'ti_features_box4_content' ) ) {
 										echo '<p>'. get_theme_mod( 'ti_features_box4_content' ) .'</p>';
 									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'ti' ) .'</p>';
+										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
@@ -275,7 +275,7 @@
 
 							<?php }
 					} else {
-						_e( 'No posts found', 'ti' );
+						_e( 'No posts found', 'medica_lite' );
 					}
 
 					wp_reset_postdata();
