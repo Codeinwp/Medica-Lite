@@ -7,6 +7,9 @@ function medica_lite_sanitize_callback_text( $input ) {
 	return wp_kses_post( force_balance_tags( $input ) );
 }
 
+/**
+ *	Sanitize Callback: Textarea
+ */
 function medica_lite_sanitize_callback_textarea( $input ) {
 	return htmlspecialchars_decode( $input );
 }
@@ -14,6 +17,8 @@ function medica_lite_sanitize_callback_textarea( $input ) {
 function medica_lite_customizer( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
     /**
      * Socials Icons Settings
