@@ -5,6 +5,7 @@
  */
 require_once( 'includes/custom-functions.php' );
 require_once( 'includes/customizer.php' );
+require_once( 'includes/tgm-plugin-activation/tgm-plugin-activation.php' );
 
 /**
  *  WP Title
