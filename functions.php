@@ -3,8 +3,8 @@
 /**
  *	Require Once
  */
-require_once ( 'includes/custom-functions.php' );
-require_once ( 'includes/customizer.php' );
+require_once( 'includes/custom-functions.php' );
+require_once( 'includes/customizer.php' );
 
 /**
  *  WP Title

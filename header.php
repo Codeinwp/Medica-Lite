@@ -45,7 +45,7 @@
 								}
 
 								if ( get_theme_mod( 'ti_telephone_number' ) ) {
-									echo '<a href="tel:'. get_theme_mod( 'ti_telephone_number' ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'ti_telephone_number' ) .'</a>';
+									echo '<a href="tel:'. get_theme_mod( 'ti_telephone_number' ) .'" title="'. get_theme_mod( 'ti_telephone_title' ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'ti_telephone_number' ) .'</a>';
 								} else {
 									echo '<div style="margin-top: 24px;"></div>';
 								}

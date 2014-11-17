@@ -1,19 +1,30 @@
 <?php
 
+/**
+ *	Sanitize Callback: Text
+ */
+function medica_lite_sanitize_callback_text( $input ) {
+	return wp_kses_post( force_balance_tags( $input ) );
+}
+
+function medica_lite_sanitize_callback_textarea( $input ) {
+	return htmlspecialchars_decode( $input );
+}
+
 function medica_lite_customizer( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
-    /*
-    ** Socials Icons Settings
-    */
+    /**
+     * Socials Icons Settings
+     */
     $wp_customize->add_section( 'social_icons_settings' , array(
     	'title'       => __( 'Socials Icon:', 'ti' ),
     	'priority'    => 200,
 	) );
 
 		/* Facebook - Link */
-		$wp_customize->add_setting( 'ti_social_icons_facebook_link' );
+		$wp_customize->add_setting( 'ti_social_icons_facebook_link', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_social_icons_facebook_link', array(
 		    'label'    => __( 'Facebook - Link:', 'ti' ),
 		    'section'  => 'social_icons_settings',
@@ -22,7 +33,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Twitter - Link */
-		$wp_customize->add_setting( 'ti_social_icons_twitter_link' );
+		$wp_customize->add_setting( 'ti_social_icons_twitter_link', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_social_icons_twitter_link', array(
 		    'label'    => __( 'Twitter - Link:', 'ti' ),
 		    'section'  => 'social_icons_settings',
@@ -31,7 +42,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* YouTube - Link */
-		$wp_customize->add_setting( 'ti_social_icons_youtube_link' );
+		$wp_customize->add_setting( 'ti_social_icons_youtube_link', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_social_icons_youtube_link', array(
 		    'label'    => __( 'YouTube - Link:', 'ti' ),
 		    'section'  => 'social_icons_settings',
@@ -40,7 +51,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* LinkedIn - Link */
-		$wp_customize->add_setting( 'ti_social_icons_linkedin_link' );
+		$wp_customize->add_setting( 'ti_social_icons_linkedin_link', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_social_icons_linkedin_link', array(
 		    'label'    => __( 'LinkedIn - Link:', 'ti' ),
 		    'section'  => 'social_icons_settings',
@@ -48,16 +59,16 @@ function medica_lite_customizer( $wp_customize ) {
 			'priority' => '4',
 		) );
 
-	/*
-    ** Contact Settings
-    */
+	/**
+     * Contact Settings
+     */
     $wp_customize->add_section( 'contact_settings' , array(
     	'title'       => __( 'Contact:', 'ti' ),
     	'priority'    => 250,
 	) );
 
 		/* Telephone - Title */
-		$wp_customize->add_setting( 'ti_telephone_title' );
+		$wp_customize->add_setting( 'ti_telephone_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_telephone_title', array(
 		    'label'    => __( 'Telephone - Title:', 'ti' ),
 		    'section'  => 'contact_settings',
@@ -66,7 +77,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Telephone - Number */
-		$wp_customize->add_setting( 'ti_telephone_number' );
+		$wp_customize->add_setting( 'ti_telephone_number', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_telephone_number', array(
 		    'label'    => __( 'Telephone - Number:', 'ti' ),
 		    'section'  => 'contact_settings',
@@ -75,7 +86,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Contact - Address - Title */
-		$wp_customize->add_setting( 'ti_contact_address_title' );
+		$wp_customize->add_setting( 'ti_contact_address_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_contact_address_title', array(
 		    'label'    => __( 'Contact Address - Title:', 'ti' ),
 		    'section'  => 'contact_settings',
@@ -84,7 +95,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Contact - Address */
-		$wp_customize->add_setting( 'ti_contact_address_content' );
+		$wp_customize->add_setting( 'ti_contact_address_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contact_address_content', array(
 		            'label' 	=> __( 'Contact Address - Content:', 'ti' ),
 		            'section' 	=> 'contact_settings',
@@ -94,16 +105,16 @@ function medica_lite_customizer( $wp_customize ) {
 		    )
 		);
 
-	/*
-    ** Subheader
-    */
+	/**
+     * Subheader
+     */
     $wp_customize->add_section( 'subheader_settings' , array(
     	'title'       => __( 'Subheader:', 'ti' ),
     	'priority'    => 300,
 	) );
 
 		/* Background Image */
-		$wp_customize->add_setting( 'ti_subheader_background_image' );
+		$wp_customize->add_setting( 'ti_subheader_background_image', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ti_subheader_background_image', array(
 		    'label'    => __( 'Background Image:', 'ti' ),
 		    'section'  => 'subheader_settings',
@@ -112,7 +123,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) ) );
 
 		/* Article - Title */
-		$wp_customize->add_setting( 'ti_subheader_article_title' );
+		$wp_customize->add_setting( 'ti_subheader_article_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_subheader_article_title', array(
 		    'label'    => __( 'Title:', 'ti' ),
 		    'section'  => 'subheader_settings',
@@ -121,7 +132,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Article - Content */
-		$wp_customize->add_setting( 'ti_subheader_article_content' );
+		$wp_customize->add_setting( 'ti_subheader_article_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_subheader_article_content', array(
 		            'label' 	=> __( ' Content', 'ti' ),
 		            'section' 	=> 'subheader_settings',
@@ -132,7 +143,7 @@ function medica_lite_customizer( $wp_customize ) {
 		);
 
 		/* Article - Button Text */
-		$wp_customize->add_setting( 'ti_subheader_article_button_text' );
+		$wp_customize->add_setting( 'ti_subheader_article_button_text', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_subheader_article_button_text', array(
 		    'label'    => __( 'Button Text:', 'ti' ),
 		    'section'  => 'subheader_settings',
@@ -141,7 +152,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Article - Button Link */
-		$wp_customize->add_setting( 'ti_subheader_article_button_link' );
+		$wp_customize->add_setting( 'ti_subheader_article_button_link', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_subheader_article_button_link', array(
 		    'label'    => __( 'Button Link:', 'ti' ),
 		    'section'  => 'subheader_settings',
@@ -149,16 +160,16 @@ function medica_lite_customizer( $wp_customize ) {
 			'priority' => '5',
 		) );
 
-	/*
-    ** Front Page
-    */
+	/**
+     * Front Page
+     */
     $wp_customize->add_section( 'frontpage_settings' , array(
     	'title'       => __( 'Frontpage:', 'ti' ),
     	'priority'    => 350,
 	) );
 
 		/* Article - Title */
-		$wp_customize->add_setting( 'ti_frontpage_article_title' );
+		$wp_customize->add_setting( 'ti_frontpage_article_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_frontpage_article_title', array(
 		    'label'    => __( 'Article - Title:', 'ti' ),
 		    'section'  => 'frontpage_settings',
@@ -167,7 +178,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Article - Content */
-		$wp_customize->add_setting( 'ti_frontpage_article_content' );
+		$wp_customize->add_setting( 'ti_frontpage_article_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_frontpage_article_content', array(
 		            'label' 	=> __( 'Article - Content:', 'ti' ),
 		            'section' 	=> 'frontpage_settings',
@@ -177,7 +188,7 @@ function medica_lite_customizer( $wp_customize ) {
 		    )
 		);
 
-		$wp_customize->add_setting( 'ti_frontpage_article_image' );
+		$wp_customize->add_setting( 'ti_frontpage_article_image', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ti_frontpage_article_image', array(
 		    'label'    => __( 'Article - Image:', 'ti' ),
 		    'section'  => 'frontpage_settings',
@@ -194,7 +205,7 @@ function medica_lite_customizer( $wp_customize ) {
 	) );
 
 		/* Article - Title */
-		$wp_customize->add_setting( 'ti_features_article_title' );
+		$wp_customize->add_setting( 'ti_features_article_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_article_title', array(
 		    'label'    => __( 'Articles - Title:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -203,7 +214,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Article - Content */
-		$wp_customize->add_setting( 'ti_features_article_content' );
+		$wp_customize->add_setting( 'ti_features_article_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_features_article_content', array(
 		            'label' 	=> __( 'Article - Content:', 'ti' ),
 		            'section' 	=> 'features_settings',
@@ -214,7 +225,7 @@ function medica_lite_customizer( $wp_customize ) {
 		);
 
 		/* Box 1 - Image */
-		$wp_customize->add_setting( 'ti_features_box1_image' );
+		$wp_customize->add_setting( 'ti_features_box1_image', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ti_features_box1_image', array(
 		    'label'    => __( 'Box 1 - Image:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -223,7 +234,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) ) );
 
 		/* Box 1 - Title */
-		$wp_customize->add_setting( 'ti_features_box1_title' );
+		$wp_customize->add_setting( 'ti_features_box1_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_box1_title', array(
 		    'label'    => __( 'Box 1 - Title:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -232,7 +243,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 1 - Title Link */
-		$wp_customize->add_setting( 'ti_features_box1_titlelink' );
+		$wp_customize->add_setting( 'ti_features_box1_titlelink', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_features_box1_titlelink', array(
 		    'label'    => __( 'Box 1 - Title Link:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -241,7 +252,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 1 - Content */
-		$wp_customize->add_setting( 'ti_features_box1_content' );
+		$wp_customize->add_setting( 'ti_features_box1_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_features_box1_content', array(
 		            'label' 	=> __( 'Box 1 - Content:', 'ti' ),
 		            'section' 	=> 'features_settings',
@@ -252,7 +263,7 @@ function medica_lite_customizer( $wp_customize ) {
 		);
 
 		/* Box 2 - Image */
-		$wp_customize->add_setting( 'ti_features_box2_image' );
+		$wp_customize->add_setting( 'ti_features_box2_image', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ti_features_box2_image', array(
 		    'label'    => __( 'Box 2 - Image:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -261,7 +272,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) ) );
 
 		/* Box 2 - Title */
-		$wp_customize->add_setting( 'ti_features_box2_title' );
+		$wp_customize->add_setting( 'ti_features_box2_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_box2_title', array(
 		    'label'    => __( 'Box 2 - Title:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -270,7 +281,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 2 - Title Link */
-		$wp_customize->add_setting( 'ti_features_box2_titlelink' );
+		$wp_customize->add_setting( 'ti_features_box2_titlelink', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_features_box2_titlelink', array(
 		    'label'    => __( 'Box 2 - Title Link:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -279,7 +290,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 2 - Content */
-		$wp_customize->add_setting( 'ti_features_box2_content' );
+		$wp_customize->add_setting( 'ti_features_box2_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_features_box2_content', array(
 		            'label' 	=> __( 'Box 2 - Content:', 'ti' ),
 		            'section' 	=> 'features_settings',
@@ -290,7 +301,7 @@ function medica_lite_customizer( $wp_customize ) {
 		);
 
 		/* Box 3 - Image */
-		$wp_customize->add_setting( 'ti_features_box3_image' );
+		$wp_customize->add_setting( 'ti_features_box3_image', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ti_features_box3_image', array(
 		    'label'    => __( 'Box 3 - Image:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -299,7 +310,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) ) );
 
 		/* Box 3 - Title */
-		$wp_customize->add_setting( 'ti_features_box3_title' );
+		$wp_customize->add_setting( 'ti_features_box3_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_box3_title', array(
 		    'label'    => __( 'Box 3 - Title:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -308,7 +319,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 3 - Title Link */
-		$wp_customize->add_setting( 'ti_features_box3_titlelink' );
+		$wp_customize->add_setting( 'ti_features_box3_titlelink', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_features_box3_titlelink', array(
 		    'label'    => __( 'Box 3 - Title Link:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -317,7 +328,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 3 - Content */
-		$wp_customize->add_setting( 'ti_features_box3_content' );
+		$wp_customize->add_setting( 'ti_features_box3_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_features_box3_content', array(
 		            'label' 	=> __( 'Box 3 - Content:', 'ti' ),
 		            'section' 	=> 'features_settings',
@@ -328,7 +339,7 @@ function medica_lite_customizer( $wp_customize ) {
 		);
 
 		/* Box 4 - Image */
-		$wp_customize->add_setting( 'ti_features_box4_image' );
+		$wp_customize->add_setting( 'ti_features_box4_image', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ti_features_box4_image', array(
 		    'label'    => __( 'Box 4 - Image:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -337,7 +348,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) ) );
 
 		/* Box 4 - Title */
-		$wp_customize->add_setting( 'ti_features_box4_title' );
+		$wp_customize->add_setting( 'ti_features_box4_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_box4_title', array(
 		    'label'    => __( 'Box 4 - Title:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -346,7 +357,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 4 - Title Link */
-		$wp_customize->add_setting( 'ti_features_box4_titlelink' );
+		$wp_customize->add_setting( 'ti_features_box4_titlelink', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_features_box4_titlelink', array(
 		    'label'    => __( 'Box 4 - Title Link:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -355,7 +366,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Box 4 - Content */
-		$wp_customize->add_setting( 'ti_features_box4_content' );
+		$wp_customize->add_setting( 'ti_features_box4_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_features_box4_content', array(
 		            'label' 	=> __( 'Box 4 - Content:', 'ti' ),
 		            'section' 	=> 'features_settings',
@@ -366,7 +377,7 @@ function medica_lite_customizer( $wp_customize ) {
 		);
 
 		/* Button - Text */
-		$wp_customize->add_setting( 'ti_features_box4_button_text' );
+		$wp_customize->add_setting( 'ti_features_box4_button_text', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_box4_button_text', array(
 		    'label'    => __( 'Button - Text:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -375,7 +386,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Button - Link */
-		$wp_customize->add_setting( 'ti_features_box4_button_link' );
+		$wp_customize->add_setting( 'ti_features_box4_button_link', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( 'ti_features_box4_button_link', array(
 		    'label'    => __( 'Button - Link:', 'ti' ),
 		    'section'  => 'features_settings',
@@ -392,7 +403,7 @@ function medica_lite_customizer( $wp_customize ) {
 	) );
 
 		/* Latest News - Title */
-		$wp_customize->add_setting( 'ti_features_latestnews_title' );
+		$wp_customize->add_setting( 'ti_features_latestnews_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_latestnews_title', array(
 		    'label'    => __( 'Latest News - Title:', 'ti' ),
 		    'section'  => 'content_settings',
@@ -401,7 +412,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Latest News - Number of articles */
-		$wp_customize->add_setting( 'ti_features_latestnews_numberofarticles' );
+		$wp_customize->add_setting( 'ti_features_latestnews_numberofarticles', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_features_latestnews_numberofarticles', array(
 			'default'			=> 2,
 		    'label'    			=> __( 'Latest News - Number of articles:', 'ti' ),
@@ -420,7 +431,7 @@ function medica_lite_customizer( $wp_customize ) {
 	) );
 
 		/* About Us - Title */
-		$wp_customize->add_setting( 'ti_contact_aboutus_title' );
+		$wp_customize->add_setting( 'ti_contact_aboutus_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_contact_aboutus_title', array(
 		    'label'    => __( 'About Us - Title:', 'ti' ),
 		    'section'  => 'footer_settings',
@@ -429,7 +440,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* About Us - Image */
-		$wp_customize->add_setting( 'ti_footer_aboutus_image' );
+		$wp_customize->add_setting( 'ti_footer_aboutus_image', array( 'sanitize_callback' => 'esc_url_raw' ) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ti_footer_aboutus_image', array(
 		    'label'    => __( 'About Us - Image:', 'ti' ),
 		    'section'  => 'footer_settings',
@@ -438,7 +449,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) ) );
 
 		/* About Us - Content */
-		$wp_customize->add_setting( 'ti_footer_aboutus_content' );
+		$wp_customize->add_setting( 'ti_footer_aboutus_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_footer_aboutus_content', array(
 		            'label' 	=> __( 'About Us - Content', 'ti' ),
 		            'section' 	=> 'footer_settings',
@@ -449,7 +460,7 @@ function medica_lite_customizer( $wp_customize ) {
 		);
 
 		/* Menu - Title */
-		$wp_customize->add_setting( 'ti_contact_menu_title' );
+		$wp_customize->add_setting( 'ti_contact_menu_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_contact_menu_title', array(
 		    'label'    => __( 'Menu - Title:', 'ti' ),
 		    'section'  => 'footer_settings',
@@ -466,7 +477,7 @@ function medica_lite_customizer( $wp_customize ) {
 	) );
 
 		/* Map - Code */
-		$wp_customize->add_setting( 'ti_contactpage_map_code' );
+		$wp_customize->add_setting( 'ti_contactpage_map_code', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_textarea' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_contactpage_map_code', array(
 		            'label' 	=> __( 'Map - Code:', 'ti' ),
 		            'section' 	=> 'contactpage_settings',
@@ -485,7 +496,7 @@ function medica_lite_customizer( $wp_customize ) {
 	) );
 
 		/* Title */
-		$wp_customize->add_setting( 'ti_404page_title' );
+		$wp_customize->add_setting( 'ti_404page_title', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_404page_title', array(
 		    'label'    => __( 'Title:', 'ti' ),
 		    'section'  => '404page_settings',
@@ -494,7 +505,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Subtitle */
-		$wp_customize->add_setting( 'ti_404page_subtitle' );
+		$wp_customize->add_setting( 'ti_404page_subtitle', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( 'ti_404page_subtitle', array(
 		    'label'    => __( 'Subtitle:', 'ti' ),
 		    'section'  => '404page_settings',
@@ -503,7 +514,7 @@ function medica_lite_customizer( $wp_customize ) {
 		) );
 
 		/* Content */
-		$wp_customize->add_setting( 'ti_404page_settings_content' );
+		$wp_customize->add_setting( 'ti_404page_settings_content', array( 'sanitize_callback' => 'medica_lite_sanitize_callback_text' ) );
 		$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'ti_404page_settings_content', array(
 		            'label' 	=> __( 'Content:', 'ti' ),
 		            'section' 	=> '404page_settings',
@@ -512,7 +523,6 @@ function medica_lite_customizer( $wp_customize ) {
 		        )
 		    )
 		);
-
 
 }
 add_action( 'customize_register', 'medica_lite_customizer' );
