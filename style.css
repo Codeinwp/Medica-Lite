@@ -4,7 +4,7 @@ Theme URI: https://themeisle.com/themes/medica-lite/
 Author: ThemeIsle
 Author URI: http://www.themeisle.com
 Description: Medica Lite is free WordPress theme. It's perfect for doctors
-Version: 1.1
+Version: 1.2
 License: GNU General Public License version 3
 License URI: license.txt
 Tags: white, light, two-columns, right-sidebar, custom-header, custom-menu, featured-images, rtl-language-support, sticky-post, translation-ready
@@ -117,6 +117,14 @@ body {
   color: #fff;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
+}
+
+body.custom-background {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .wrapper {
