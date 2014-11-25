@@ -225,3 +225,4 @@ The GNU General Public License does not permit incorporating your program into p
 18. Credit:
 
 	- TGM Plugin Activation: http://www.tgmpluginactivation
+	- Contact Form 7: https://wordpress.org/plugins/contact-form-7/
