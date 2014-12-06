@@ -94,14 +94,14 @@
 			if ( is_front_page() ) {
 
 				if ( get_theme_mod( 'ti_subheader_background_image' ) ) {
-					$subheader_background_image = get_theme_mod( 'ti_subheader_background_image' );
+					$subheader_background_image = 'background-image: url('. get_theme_mod( 'ti_subheader_background_image' ) .');';
 				} else {
-					$subheader_background_image = get_template_directory_uri() . '/images/full-header.jpg';
+					$subheader_background_image = '';
 				}
 
 				?>
 
-				<div id="subheader" style="background-image: url(<?php echo $subheader_background_image; ?>);">
+				<div id="subheader" style="<?php echo $subheader_background_image; ?>">
 					<?php
 					if ( get_theme_mod( 'ti_subheader_article_title' ) || get_theme_mod( 'ti_subheader_article_content' ) || get_theme_mod( 'ti_subheader_article_button_text' ) ) { ?>
 
