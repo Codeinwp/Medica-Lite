@@ -345,11 +345,12 @@ body.custom-background {
 
 .navigation li ul li {
   width: 100%;
+  height: auto;
   margin-left: 0px;
 }
 
 .navigation li ul li a {
-  height: 54px;
+  /* height: 54px; */
   line-height: 54px;
   font-weight: normal;
   border: none;
