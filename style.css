@@ -382,8 +382,13 @@ body.custom-background {
 #subheader {
   width: 100%;
   height: auto;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 #subheader .subheader-color {
