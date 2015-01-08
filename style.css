@@ -693,7 +693,7 @@ body.custom-background {
 #content #latest-news h3 {
   color: #1b4269;
   font-size: 30px;
-  margin-bottom: 35px;
+  /* margin-bottom: 35px; */
 }
 #content #latest-news .news {
   width: 50%;
@@ -701,10 +701,12 @@ body.custom-background {
   word-wrap: break-word;
   float: left;
 }
+/*
 #content #latest-news .news:nth-child(1),
 #content #latest-news .news:nth-child(2) {
   margin-top: 0;
 }
+*/
 #content #latest-news .news .img-div {
   width: 144px;
   height: 149px;

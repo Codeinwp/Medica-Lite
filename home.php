@@ -228,19 +228,9 @@
 					if ( get_theme_mod( 'ti_features_latestnews_title' ) ) {
 						echo '<h3>'. get_theme_mod( 'ti_features_latestnews_title' ) .'</h3>';
 					}
-					?>
-					<?php
-
-					if ( get_theme_mod( 'ti_features_latestnews_numberofarticles' ) ) {
-						$latestnews_numberofarticles =  get_theme_mod( 'ti_features_latestnews_numberofarticles' );
-					} else {
-						$latestnews_numberofarticles = '2';
-					}
 
 					$args = array (
 						'post_type'				=> 'post',
-						'posts_per_page'		=> $latestnews_numberofarticles,
-						'ignore_sticky_posts'	=> true
 					);
 
 					$wp_query = new WP_Query( $args );
@@ -250,7 +240,7 @@
 							$wp_query->the_post();
 							$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-							<div class="news cf">
+							<div id="post-<?php the_ID(); ?>" <?php post_class( 'news cf' ); ?>>
 
 								<?php
 								if ( $featured_image ) { ?>
