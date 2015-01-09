@@ -144,3 +144,24 @@ function medica_lite_general_sidebar() {
 
 }
 add_action( 'widgets_init', 'medica_lite_general_sidebar' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function _s_scripts() {
+    wp_enqueue_script( '_s-html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.2', false );
+}
+add_action( 'wp_enqueue_scripts', '_s_scripts' );
+
+/**
+ * Load only in IE as of WP 4.1
+ */
+function _s_html5shiv( $tag, $handle, $src ) {
+    if ( '_s-html5shiv' === $handle ) {
+        $tag = "<!--[if lt IE 9]>\n";
+        $tag .= "<script type='text/javascript' src='$src'></script>\n";
+        $tag .= "<![endif]-->\n";
+    }
+    return $tag;
+}
+add_filter( 'script_loader_tag', '_s_html5shiv', 10, 3 );
