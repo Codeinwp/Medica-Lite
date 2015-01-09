@@ -73,7 +73,7 @@ add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_scripts_medica' );
 function medica_lite_header_navigation() {
 
 	$locations = array(
-		'header-navigation' => __( 'This menu will appear in header.', 'denta_lite' ),
+		'header-navigation' => __( 'This menu will appear in header.', 'medica_lite' ),
 	);
 	register_nav_menus( $locations );
 
@@ -86,7 +86,7 @@ add_action( 'init', 'medica_lite_header_navigation' );
 function medica_lite_footer_navigation() {
 
     $locations = array(
-        'footer-navigation' => __( 'This menu will appear in footer.', 'denta_lite' ),
+        'footer-navigation' => __( 'This menu will appear in footer.', 'medica_lite' ),
     );
     register_nav_menus( $locations );
 
@@ -133,8 +133,8 @@ function medica_lite_general_sidebar() {
 
     $args = array(
         'id'            => 'general-sidebar',
-        'name'          => __( 'General Sidebar', 'denta_lite' ),
-        'description'   => __( 'Use this sidebar to display widgets in your website, including posts and pages.', 'denta_lite' ),
+        'name'          => __( 'General Sidebar', 'medica_lite' ),
+        'description'   => __( 'Use this sidebar to display widgets in your website, including posts and pages.', 'medica_lite' ),
         'before_title'  => '<div class="title-widget">',
         'after_title'   => '</div>',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
