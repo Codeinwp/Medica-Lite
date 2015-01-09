@@ -43,8 +43,8 @@ if ( ! isset( $content_width ) ) $content_width = 634;
 function medica_lite_wp_enqueue_style_medica() {
 
     wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.3' );
-    wp_enqueue_style( 'font-family-raleway', 'http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900', array(), '1.0' );
-    wp_enqueue_style( 'font-family-roboto', 'http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,900italic,900,700italic,700,500italic,500', array(), '1.0' );
+    wp_enqueue_style( 'font-family-raleway', '//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900', array(), '1.0' );
+    wp_enqueue_style( 'font-family-roboto', '//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,900italic,900,700italic,700,500italic,500', array(), '1.0' );
     wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), '1.0' );
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
