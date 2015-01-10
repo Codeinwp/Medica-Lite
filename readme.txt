@@ -18,3 +18,24 @@ The exceptions to this license are as follows:
 * TGM Plugin Activation (http://tgmpluginactivation.com)
     Copyright (C) Thomas Griffin (https://thomasgriffin.io)
     License under GPL-2.0 or later license.
+
+* Font Awesome is fully open source and is GPL friendly. You can use it for commercial projects, open source projects, or really just about whatever you want.
+	http://fortawesome.github.io/Font-Awesome/license/
+
+* Icomoon
+	https://icomoon.io/
+
+* js/html5shiv.js
+	Copyright (C) Copyright (c) 2014 Alexander Farkas (aFarkas)
+	https://github.com/aFarkas/html5shiv
+	Licensed under MIT
+
+* Font Family: Raleway
+	Copyright (c) 2010 - 2012, Matt McInerney (matt@pixelspread.com), Pablo Impallari(impallari@gmail.com), Rodrigo Fuenzalida (hello@rfuenzalida.com) with Reserved Font Name "Raleway"
+	http://www.google.com/fonts/specimen/Raleway
+	This Font Software is licensed under the SIL Open Font License, Version 1.1.
+
+* Font Family: Roboto
+	Copyright (C) Christian Robertson
+	http://www.google.com/fonts/specimen/Roboto
+	Apache License, version 2.0

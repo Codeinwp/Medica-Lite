@@ -1,3 +1,0 @@
-License:
-
-1. WP Title: http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_title

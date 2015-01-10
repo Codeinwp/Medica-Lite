@@ -570,4 +570,17 @@ if( class_exists( 'WP_Customize_Control' ) ):
 	}
 endif;
 
+/**
+ *	Registers
+ */
+function medica_lite_registers() {
+	wp_register_script( 'medica_lite_customizer_script', get_template_directory_uri() . '/js/medica_lite_customizer.js', array("jquery"), '20120206', true  );
+	wp_enqueue_script( 'medica_lite_customizer_script' );
+	wp_localize_script( 'medica_lite_customizer_script', 'medica_lite_buttons', array(
+		'doc'  => __( 'Documentation', 'medica_lite' ),
+		'pro' => __( 'View PRO Version', 'medica_lite' ),
+	) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'medica_lite_registers' );
+
 ?>
