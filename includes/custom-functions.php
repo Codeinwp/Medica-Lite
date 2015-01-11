@@ -46,7 +46,7 @@ function medica_lite_comments( $comment, $args, $depth ) {
         case 'trackback' :
     ?>
     <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'denta_lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'denta_lite' ), ' ' ); ?></p>
+        <p><?php _e( 'Pingback:', 'medica_lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'medica_lite' ), ' ' ); ?></p>
     <?php
             break;
         default :
@@ -56,19 +56,19 @@ function medica_lite_comments( $comment, $args, $depth ) {
             <?php echo get_avatar( $comment, 120 ); ?>
             <div class="comment-entry">
                 <div class="comment-entry-head">
-                    <?php printf( __( '<span>%s</span>', 'denta_lite' ), sprintf( '%s', get_comment_author_link() ) ); ?> -
+                    <?php printf( __( '<span>%s</span>', 'medica_lite' ), sprintf( '%s', get_comment_author_link() ) ); ?> -
                     <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" class="comment-entry-head-date">
                         <time pubdate datetime="<?php comment_time( 'c' ); ?>">
-                            <?php printf( __( '%1$s at %2$s', 'denta_lite' ), get_comment_date(), get_comment_time() ); ?>
+                            <?php printf( __( '%1$s at %2$s', 'medica_lite' ), get_comment_date(), get_comment_time() ); ?>
                         </time>
                     </a><!--/a .comment-entry-head-date-->
-                    <?php edit_comment_link( __( 'Edit', 'denta_lite' ), '- ' ); ?>
+                    <?php edit_comment_link( __( 'Edit', 'medica_lite' ), '- ' ); ?>
                 </div><!--/div .comment-entry-head-->
                 <div class="comment-entry-content">
                     <?php comment_text(); ?>
                 </div><!--/div .comment-entry-content-->
                 <?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em class="awaiting-moderation cf"><?php _e( 'Your comment is awaiting moderation.', 'denta_lite' ); ?></em><br />
+                    <em class="awaiting-moderation cf"><?php _e( 'Your comment is awaiting moderation.', 'medica_lite' ); ?></em><br />
                 <?php endif; ?>
                 <div class="coment-reply-link-div cf">
                     <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>

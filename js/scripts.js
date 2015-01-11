@@ -3,25 +3,6 @@
  */
 jQuery(document).ready(function($) {
 
-	/* carouFredSel */
-	$('#foo2').carouFredSel({
-		auto: true,
-		prev: '#prev2',
-		next: '#next2',
-		mousewheel: true,
-		responsive: true,
-		items: {
-			height: 'auto'
-		},
-		swipe: {
-			onMouse: true,
-			onTouch: true
-		}
-	});
-
-	/* Fancybox */
-	$(".fancybox").fancybox();
-
 	/* Masonry */
 	var $container = $('.gallery');
 
