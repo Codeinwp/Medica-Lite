@@ -103,6 +103,7 @@ add_action( 'init', 'medica_lite_footer_navigation' );
  */
 add_theme_support( "post-thumbnails" ); // Post Thumbnails
 add_theme_support( "automatic-feed-links" ); // Automatic Feed Links
+add_theme_support( "title-tag" ); // Title Tag
 
 $args_custom_header = array(
     'width'         => '180',
