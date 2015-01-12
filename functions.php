@@ -116,8 +116,7 @@ add_theme_support( "custom-header", $args_custom_header ); // Custom Header
 $args_custom_background = array(
     'default-color'         => '#ffffff',
     'default-repeat'        => 'no-repeat',
-    'default-attachment'    => 'fixed',
-    'default-image'         => get_template_directory_uri() . '/images/full-header.jpg'
+    'default-attachment'    => 'fixed'
 );
 add_theme_support( "custom-background", $args_custom_background ); // Custom Background
 
