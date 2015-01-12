@@ -26,7 +26,7 @@ function medica_lite_wp_title( $title, $sep ) {
 
     // Add a page number if necessary.
     if ( $paged >= 2 || $page >= 2 )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'twentytwelve' ), max( $paged, $page ) );
+        $title = "$title $sep " . sprintf( __( 'Page %s', 'medica_lite' ), max( $paged, $page ) );
 
     return $title;
 }
@@ -60,6 +60,7 @@ add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_style_medica' );
 function medica_lite_wp_enqueue_scripts_medica() {
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'masonry' );
+    wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.2', false );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_scripts_medica' );
@@ -103,6 +104,7 @@ add_action( 'init', 'medica_lite_footer_navigation' );
  */
 add_theme_support( "post-thumbnails" ); // Post Thumbnails
 add_theme_support( "automatic-feed-links" ); // Automatic Feed Links
+add_theme_support( "title-tag" ); // Title Tag
 
 $args_custom_header = array(
     'width'         => '180',
@@ -116,8 +118,7 @@ add_theme_support( "custom-header", $args_custom_header ); // Custom Header
 $args_custom_background = array(
     'default-color'         => '#ffffff',
     'default-repeat'        => 'no-repeat',
-    'default-attachment'    => 'fixed',
-    'default-image'         => get_template_directory_uri() . '/images/full-header.jpg'
+    'default-attachment'    => 'fixed'
 );
 add_theme_support( "custom-background", $args_custom_background ); // Custom Background
 
@@ -151,22 +152,14 @@ function medica_lite_general_sidebar() {
 add_action( 'widgets_init', 'medica_lite_general_sidebar' );
 
 /**
- * Enqueue scripts and styles.
- */
-function _s_scripts() {
-    wp_enqueue_script( '_s-html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.2', false );
-}
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
-
-/**
  * Load only in IE as of WP 4.1
  */
-function _s_html5shiv( $tag, $handle, $src ) {
-    if ( '_s-html5shiv' === $handle ) {
+function medica_lite_html5shiv( $tag, $handle, $src ) {
+    if ( 'html5shiv' === $handle ) {
         $tag = "<!--[if lt IE 9]>\n";
         $tag .= "<script type='text/javascript' src='$src'></script>\n";
         $tag .= "<![endif]-->\n";
     }
     return $tag;
 }
-add_filter( 'script_loader_tag', '_s_html5shiv', 10, 3 );
+add_filter( 'script_loader_tag', 'medica_lite_html5shiv', 10, 3 );
