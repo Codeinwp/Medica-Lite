@@ -21,45 +21,45 @@
 			  	<div id="contact-content" class="cf">
 
 			  		<?php
-			  		if ( get_theme_mod( 'ti_contactpage_map_code' ) ) { ?>
+			  		if ( get_theme_mod( 'medica_lite_contactpage_map_code' ) ) { ?>
 
 			  			<div id="map-city">
-			  				<?php echo get_theme_mod( 'ti_contactpage_map_code' ); ?>
+			  				<?php echo get_theme_mod( 'medica_lite_contactpage_map_code' ); ?>
 			  			</div><!--/#map-city-->
 
 			  			<?php
-				  		if ( get_theme_mod( 'ti_contact_address_title' ) || get_theme_mod( 'ti_contact_address_content' ) || get_theme_mod( 'ti_telephone_number' ) ) { ?>
+				  		if ( get_theme_mod( 'medica_lite_contact_address_title' ) || get_theme_mod( 'medica_lite_contact_address_content' ) || get_theme_mod( 'medica_lite_telephone_number' ) ) { ?>
 
 				  			<div id="contact-information" class="cf">
 					  			<?php
-					  			if ( get_theme_mod( 'ti_contact_address_title' ) ) {
-					  				echo '<div class="title">'. get_theme_mod( 'ti_contact_address_title' ) .'</div>';
+					  			if ( get_theme_mod( 'medica_lite_contact_address_title' ) ) {
+					  				echo '<div class="title">'. get_theme_mod( 'medica_lite_contact_address_title' ) .'</div>';
 					  			}
 
-					  			if ( get_theme_mod( 'ti_contact_address_content' ) ) {
-					  				echo '<span>'. get_theme_mod( 'ti_contact_address_content' ) .'</span>';
+					  			if ( get_theme_mod( 'medica_lite_contact_address_content' ) ) {
+					  				echo '<span>'. get_theme_mod( 'medica_lite_contact_address_content' ) .'</span>';
 					  			}
 
-					  			if ( get_theme_mod( 'ti_telephone_number' ) ) {
-									echo '<a href="tel:'. get_theme_mod( 'ti_telephone_number' ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'ti_telephone_number' ) .'</a>';
+					  			if ( get_theme_mod( 'medica_lite_telephone_number' ) ) {
+									echo '<a href="tel:'. get_theme_mod( 'medica_lite_telephone_number' ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'medica_lite_telephone_number' ) .'</a>';
 								}
 					  			?>
 								<ul class="cf">
 									<?php
-									if ( get_theme_mod( 'ti_social_icons_facebook_link' ) ) {
-										echo '<li><a href="'. get_theme_mod( 'ti_social_icons_facebook_link' ) .'" title="LinkedIn" class="icon" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_social_icons_facebook_link' ) ) {
+										echo '<li><a href="'. get_theme_mod( 'medica_lite_social_icons_facebook_link' ) .'" title="LinkedIn" class="icon" target="_blank"></a></li>';
 									}
 
-									if ( get_theme_mod( 'ti_social_icons_twitter_link' ) ) {
-										echo '<li><a href="'. get_theme_mod( 'ti_social_icons_twitter_link' ) .'" title="YouTube" class="icon" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_social_icons_twitter_link' ) ) {
+										echo '<li><a href="'. get_theme_mod( 'medica_lite_social_icons_twitter_link' ) .'" title="YouTube" class="icon" target="_blank"></a></li>';
 									}
 
-									if ( get_theme_mod( 'ti_social_icons_youtube_link' ) ) {
-										echo '<li><a href="'. get_theme_mod( 'ti_social_icons_youtube_link' ) .'" title="Twitter" class="icon" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_social_icons_youtube_link' ) ) {
+										echo '<li><a href="'. get_theme_mod( 'medica_lite_social_icons_youtube_link' ) .'" title="Twitter" class="icon" target="_blank"></a></li>';
 									}
 
-									if ( get_theme_mod( 'ti_social_icons_linkedin_link' ) ) {
-										echo '<li><a href="'. get_theme_mod( 'ti_social_icons_linkedin_link' ) .'" title="Facebook" class="icon" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_social_icons_linkedin_link' ) ) {
+										echo '<li><a href="'. get_theme_mod( 'medica_lite_social_icons_linkedin_link' ) .'" title="Facebook" class="icon" target="_blank"></a></li>';
 									}
 									?>
 								</ul>

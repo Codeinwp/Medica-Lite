@@ -3,7 +3,7 @@
  */
 jQuery(document).ready(function($) {
 
-	/* Masonry */
+	// Masonry
 	var $container = $('.gallery');
 
 	$container.imagesLoaded( function(){
@@ -12,9 +12,14 @@ jQuery(document).ready(function($) {
 		});
 	});
 
-	/* Responsive Menu */
+	// Responsive Menu
 	$('.openresponsivemenu').click(function() {
 		$('.navigation-menu').toggleClass("responsivemenu cf");
+	});
+
+	// Nivo Lightbox
+	$(document).ready(function(){
+	    $('a.nivo-lightbox').nivoLightbox();
 	});
 
 });
