@@ -109,7 +109,7 @@
 			</div><!--/div .wrapper-->
 			<div class="copyright-name">
 				<div class="wrapper">
-					<?php _e( 'Medica &copy; 2014 All rights reserved', 'medica_lite' ); ?>
+					<?php _e( 'Copyright &copy;', 'medica_lite' ); ?> <a href="<?php echo home_url(); ?>" title="<?php _e( 'Medica Lite', 'medica_lite' ); ?>"><?php _e( 'Medica Lite', 'medica_lite' ); ?></a> <?php _e( 'is proudly powered by', 'medica_lite' ); ?> <a href="" title="<?php _e( 'WordPress', 'medica_lite' ); ?>"><?php _e( 'WordPress', 'medica_lite' ); ?></a>.
 				</div><!--/div .wrapper-->
 			</div><!-- /div .copyright-name -->
 		</footer><!--/footer #footer-->

@@ -1519,6 +1519,13 @@ body.custom-background {
   color: #636363;
   font-family: Arial;
 }
+#footer .copyright-name a {
+  color: #636363;
+  text-decoration: underline;
+}
+#footer .copyright-name a:hover {
+  text-decoration: none;
+}
 
 /*
 ** 2 - Blog
