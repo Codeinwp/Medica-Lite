@@ -579,8 +579,8 @@ function medica_lite_registers() {
 	wp_localize_script( 'medica_lite_customizer_script', 'medica_lite_buttons', array(
 		'doc'			=> __( 'Documentation', 'medica_lite' ),
 		'pro'			=> __( 'View PRO Version', 'medica_lite' ),
-		'team'			=> __( '<span class="sidebar-content-title">Our Team Section</span> <span class="sidebar-content-description">(available in PRO version)</span>', 'medica_lite' ),
-		'testimonials'	=> __( '<span class="sidebar-content-title">Testimonials Section</span> <span class="sidebar-content-description">(available in PRO version)</span>', 'medica_lite' )
+		'team'			=> '<span class="sidebar-content-title">'. __( 'Our Team Section', 'medica_lite' ) .'</span><span class="sidebar-content-description">'. __( '(available in PRO version)', 'medica_lite' ) .'</span>',
+		'testimonials'	=> '<span class="sidebar-content-title">'. __( 'Testimonials Section', 'medica_lite' ) .'</span><span class="sidebar-content-description">'. __( '(available in PRO version)', 'medica_lite' ) .'</span>'
 	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'medica_lite_registers' );
