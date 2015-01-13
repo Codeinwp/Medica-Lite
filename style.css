@@ -246,7 +246,7 @@ body.custom-background {
   color: #646464;
 }
 #header-top .header-left .header-contact {
-  width: 212px;
+  /* width: 212px; */
   line-height: 14px;
   margin-left: 13px;
   margin-top: -6px;
@@ -2900,7 +2900,7 @@ body.custom-background {
   float: left;
 }
 
-.gallery-item a.fancybox {
+.gallery-item a.nivo-lightbox {
   text-decoration: none !important;
 }
 
