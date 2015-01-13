@@ -33,6 +33,66 @@ function medica_lite_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'medica_lite_wp_title', 10, 2 );
 
 /**
+ *  Medica Lite Setup
+ */
+if ( !function_exists( 'medica_lite_setup' ) ) {
+
+    function medica_lite_setup() {
+
+        // Post Thumbnails
+        add_theme_support( "post-thumbnails" );
+
+        // Automatic Feed Links
+        add_theme_support( "automatic-feed-links" );
+
+        // Title Tag
+        add_theme_support( "title-tag" );
+
+        // Custom Header
+        $args_custom_header = array(
+            'width'         => '180',
+            'height'        => '60',
+            'flex-height'   => true,
+            'header-text'   => true,
+            'default-image' => get_template_directory_uri() . '/images/header-logo.png'
+        );
+        add_theme_support( "custom-header", $args_custom_header );
+
+        // Custom Background
+        $args_custom_background = array(
+            'default-color'         => '#ffffff',
+            'default-repeat'        => 'no-repeat',
+            'default-attachment'    => 'fixed'
+        );
+        add_theme_support( "custom-background", $args_custom_background );
+
+        // Load Plugin Textdomain
+        load_plugin_textdomain( 'medica-lite', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); // Load Text Domain
+
+        // Header Navigation
+        $header_navigation_args = array(
+            'header-navigation' => __( 'This menu will appear in header.', 'medica_lite' ),
+        );
+        register_nav_menus( $header_navigation_args );
+
+        // Footer Navigation
+        $footer_navigation_args = array(
+            'footer-navigation' => __( 'This menu will appear in footer.', 'medica_lite' ),
+        );
+        register_nav_menus( $footer_navigation_args );
+
+        // Add Editor Style
+        add_editor_style();
+
+        // The Post Thumbnail
+        the_post_thumbnail();
+
+    }
+
+}
+add_action( 'after_setup_theme', 'medica_lite_setup' );
+
+/**
  *  Content Width
  */
 if ( ! isset( $content_width ) ) $content_width = 634;
@@ -64,73 +124,6 @@ function medica_lite_wp_enqueue_scripts_medica() {
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_scripts_medica' );
-
-/**
- *  Textdomain load
- */
-function medica_lite_textdomain_load() {
-  load_plugin_textdomain( 'medica-lite', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'plugins_loaded', 'medica_lite_textdomain_load' );
-
-/**
- *	Header Navigation
- */
-function medica_lite_header_navigation() {
-
-	$locations = array(
-		'header-navigation' => __( 'This menu will appear in header.', 'medica_lite' ),
-	);
-	register_nav_menus( $locations );
-
-}
-add_action( 'init', 'medica_lite_header_navigation' );
-
-/**
- *  Footer Navigation
- */
-function medica_lite_footer_navigation() {
-
-    $locations = array(
-        'footer-navigation' => __( 'This menu will appear in footer.', 'medica_lite' ),
-    );
-    register_nav_menus( $locations );
-
-}
-add_action( 'init', 'medica_lite_footer_navigation' );
-
-/**
- *	Add Theme Support
- */
-add_theme_support( "post-thumbnails" ); // Post Thumbnails
-add_theme_support( "automatic-feed-links" ); // Automatic Feed Links
-add_theme_support( "title-tag" ); // Title Tag
-
-$args_custom_header = array(
-    'width'         => '180',
-    'height'        => '60',
-    'flex-height'   => true,
-    'header-text'   => true,
-    'default-image' => get_template_directory_uri() . '/images/header-logo.png'
-);
-add_theme_support( "custom-header", $args_custom_header ); // Custom Header
-
-$args_custom_background = array(
-    'default-color'         => '#ffffff',
-    'default-repeat'        => 'no-repeat',
-    'default-attachment'    => 'fixed'
-);
-add_theme_support( "custom-background", $args_custom_background ); // Custom Background
-
-/**
- *  Add Editor Style
- */
-add_editor_style();
-
-/**
- *  The Post Thumbnail
- */
-the_post_thumbnail();
 
 /**
  *  General Sidebar
