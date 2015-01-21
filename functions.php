@@ -109,7 +109,7 @@ function medica_lite_wp_enqueue_style_medica() {
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
     if ( is_rtl() ) {
-        wp_enqueue_style( 'rtl', get_template_directory_uri() . '/css/rtl.css', array(), '1.0' );
+        wp_enqueue_style( 'rtl', get_template_directory_uri() . '/rtl.css', array(), '1.0' );
     }
 
 }
