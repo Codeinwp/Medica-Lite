@@ -1,10 +1,10 @@
 /*
 Theme Name: Medica Lite
-Theme URI: https://themeisle.com/medica-lite/
+Theme URI: https://themeisle.com/themes/medica-lite/
 Author: ThemeIsle
 Author URI: https://www.themeisle.com
 Description: Medica Lite is the best free medical WordPress theme featuring a custom homepage with feature boxes, latest news, multiple social icons and custom blog page.
-Version: 1.2.3
+Version: 1.2.4
 License: GNU General Public License version 3
 License URI: license.txt
 Tags: white, light, two-columns, right-sidebar, custom-header, custom-menu, featured-images, rtl-language-support, sticky-post, translation-ready, blue, white, responsive-layout, fixed-layout,theme-options, threaded-comments
@@ -116,6 +116,10 @@ html {
 
 .bypostauthor {
   margin: 0;
+}
+
+.wp-caption {
+  font-style: italic;
 }
 
 body {
@@ -266,37 +270,41 @@ body.custom-background {
 #header-top .header-left .header-contact a i.icon-phone {
   font-size: 19px;
 }
-#header-top .header-left .header-contact ul li {
+#header-top .header-left .header-contact ul {
+  margin-top: 8px;
   float: right;
+}
+#header-top .header-left .header-contact ul li {
+  width: 19px;
+  height: 19px;
+  margin-left: 8px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-}
-#header-top .header-left .header-contact ul li a.icon {
-  background: url(images/social-icons.png) 0 0 no-repeat;
-  width: 19px;
-  height: 19px;
-  display: block;
-  margin: 8px 0 0 8px;
-}
-#header-top .header-left .header-contact ul li:nth-child(4) a.icon {
-  background-position: 0 0;
-}
-#header-top .header-left .header-contact ul li:nth-child(3) a.icon {
-  background-position: -27px 0;
-}
-#header-top .header-left .header-contact ul li:nth-child(2) a.icon {
-  background-position: -54px 0;
-}
-#header-top .header-left .header-contact ul li:nth-child(1) a.icon {
-  background-position: -81px 0;
+  float: left;
 }
 #header-top .header-left .header-contact ul li:hover {
   margin-top: -5px;
 }
-
+#header-top .header-left .header-contact ul li.header-facebook-icon {
+  background: url("images/header-facebook-icon.png") no-repeat;
+}
+#header-top .header-left .header-contact ul li.header-twitter-icon {
+  background: url("images/header-twitter-icon.png") no-repeat;
+}
+#header-top .header-left .header-contact ul li.header-youtube-icon {
+  background: url("images/header-youtube-icon.png") no-repeat;
+}
+#header-top .header-left .header-contact ul li.header-linkedin-icon {
+  background: url("images/header-linkedin-icon.png") no-repeat;
+}
+#header-top .header-left .header-contact ul li a {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
 .navigation {
   width: 100%;
   height: 54px;
@@ -311,7 +319,7 @@ body.custom-background {
 
 .navigation li {
   height: 54px;
-  line-height: 54px;
+  /* line-height: 54px; */
   position: relative;
   float: left;
 }
@@ -321,7 +329,8 @@ body.custom-background {
 }
 
 .navigation li a {
-  padding: 0 19px;
+  height: 100%;
+  padding: 19px 19px;
   display: block;
   color: #fff;
   text-decoration: none;
@@ -330,6 +339,11 @@ body.custom-background {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .navigation li a:hover {
@@ -357,7 +371,7 @@ body.custom-background {
 
 .navigation li ul li a {
   /* height: 54px; */
-  line-height: 54px;
+  /* line-height: 54px; */
   font-weight: normal;
   border: none;
   font-size: 14px;
@@ -380,6 +394,7 @@ body.custom-background {
 }
 
 .navigation ul li ul li.menu-item-has-children {
+  height: auto;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KPGcgaWQ9Imljb21vb24taWdub3JlIj4KCTxsaW5lIHN0cm9rZS13aWR0aD0iMSIgeDE9IiIgeTE9IiIgeDI9IiIgeTI9IiIgc3Ryb2tlPSIjRkZGRkZGIiBvcGFjaXR5PSIiPjwvbGluZT4KPC9nPgoJPHBhdGggZD0iTTYuMDgxIDEwLjczNGMtMC4yMTQgMC4yMTctMC4yMTQgMC41NjcgMCAwLjc4M3MwLjU2MSAwLjIxNyAwLjc3NSAwbDMuMDY0LTMuMTI2YzAuMjE0LTAuMjE3IDAuMjE0LTAuNTY3IDAtMC43ODNsLTMuMDY0LTMuMTI2Yy0wLjIxNC0wLjIxNy0wLjU2MS0wLjIxNy0wLjc3NSAwcy0wLjIxNCAwLjU2Ni0wLjAwMSAwLjc4MmwyLjUxMyAyLjczNS0yLjUxMiAyLjczNHoiIGZpbGw9IiNGRkZGRkYiPjwvcGF0aD4KPC9zdmc+Cg==);
   background-position: 90% center;
 }
@@ -1481,35 +1496,40 @@ body.custom-background {
 #footer .footer-box .footer-box-entry .header-contact a i.icon-phone {
   font-size: 19px;
 }
+#footer .footer-box .footer-box-entry .header-contact ul {
+  margin-bottom: 8px;
+  float: right;
+}
 #footer .footer-box .footer-box-entry .header-contact ul li {
-  float: left;
+  width: 27px;
+  height: 27px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-}
-#footer .footer-box .footer-box-entry .header-contact ul li a.icon {
-  background: url(images/social-icons-footer.png) 0 0 no-repeat;
-  width: 27px;
-  height: 27px;
-  display: block;
-  margin: 0 0 8px 8px;
-}
-#footer .footer-box .footer-box-entry .header-contact ul li:nth-child(1) a.icon {
-  background-position: 0 0;
-}
-#footer .footer-box .footer-box-entry .header-contact ul li:nth-child(2) a.icon {
-  background-position: -38px 0;
-}
-#footer .footer-box .footer-box-entry .header-contact ul li:nth-child(3) a.icon {
-  background-position: -77px 0;
-}
-#footer .footer-box .footer-box-entry .header-contact ul li:nth-child(4) a.icon {
-  background-position: -115px 0;
+  margin-left: 8px;
+  float: left;
 }
 #footer .footer-box .footer-box-entry .header-contact ul li:hover {
   margin-top: -5px;
+}
+#footer .footer-box .footer-box-entry .header-contact ul li.footer-facebook-icon {
+  background: url("images/footer-facebook-icon.png") no-repeat;
+}
+#footer .footer-box .footer-box-entry .header-contact ul li.footer-twitter-icon {
+  background: url("images/footer-twitter-icon.png") no-repeat;
+}
+#footer .footer-box .footer-box-entry .header-contact ul li.footer-youtube-icon {
+  background: url("images/footer-youtube-icon.png") no-repeat;
+}
+#footer .footer-box .footer-box-entry .header-contact ul li.footer-linkedin-icon {
+  background: url("images/footer-linkedin-icon.png") no-repeat;
+}
+#footer .footer-box .footer-box-entry .header-contact ul li a {
+  width: 27px;
+  height: 27px;
+  display: block;
 }
 #footer .copyright-name {
   width: 100%;
@@ -2440,34 +2460,35 @@ body.custom-background {
   display: block;
 }
 #contact-content #contact-information ul li {
-  float: left;
+  width: 27px;
+  height: 27px;
+  margin-left: 8px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  float: left;
 }
-#contact-content #contact-information ul li a.icon {
-  background: url(images/social-icons-footer.png) 0 0 no-repeat;
+#contact-content #contact-information ul li:first-child {
+  margin-left: 0;
+}
+#contact-content #contact-information ul li.contact-facebook-icon {
+  background: url("images/footer-facebook-icon.png") no-repeat;
+}
+#contact-content #contact-information ul li.contact-twitter-icon {
+  background: url("images/footer-twitter-icon.png") no-repeat;
+}
+#contact-content #contact-information ul li.contact-youtube-icon {
+  background: url("images/footer-youtube-icon.png") no-repeat;
+}
+#contact-content #contact-information ul li.contact-linkedin-icon {
+  background: url("images/footer-linkedin-icon.png") no-repeat;
+}
+#contact-content #contact-information ul li a {
   width: 27px;
   height: 27px;
   display: block;
-  margin: 0 0 8px 8px;
-}
-#contact-content #contact-information ul li:nth-child(1) a.icon {
-  background-position: 0 0;
-}
-#contact-content #contact-information ul li:nth-child(2) a.icon {
-  background-position: -38px 0;
-}
-#contact-content #contact-information ul li:nth-child(3) a.icon {
-  background-position: -77px 0;
-}
-#contact-content #contact-information ul li:nth-child(4) a.icon {
-  background-position: -115px 0;
-}
-#contact-content #contact-information ul li:hover {
-  margin-top: -5px;
 }
 #contact-content #contact-information a {
   line-height: 24px;
