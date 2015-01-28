@@ -8,9 +8,7 @@
 		?>
 			<div class="wide-nav">
 				<div class="wrapper">
-					<h3>
-						<?php _e( 'Blog', 'medica_lite' ); ?>
-					</h3><!--/h3-->
+					<h3><?php bloginfo( 'name' ); ?></h3>
 				</div><!--/div .wrapper-->
 			</div><!--/div .wide-nav-->
 		</header><!--/header-->

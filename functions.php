@@ -98,9 +98,9 @@ add_action( 'after_setup_theme', 'medica_lite_setup' );
 if ( ! isset( $content_width ) ) $content_width = 634;
 
 /**
- *	WP Enqueue Style Medica
+ *	WP Enqueue Style
  */
-function medica_lite_wp_enqueue_style_medica() {
+function medica_lite_wp_enqueue_style() {
 
     wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.3' );
     wp_enqueue_style( 'nivo-lightbox', get_template_directory_uri() . '/css/nivo-lightbox.css', array(), '1.2.0' );
@@ -113,19 +113,19 @@ function medica_lite_wp_enqueue_style_medica() {
     }
 
 }
-add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_style_medica' );
+add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_style' );
 
 /**
- *	WP Enqueue Scripts Medica
+ *	WP Enqueue Scripts
  */
-function medica_lite_wp_enqueue_scripts_medica() {
+function medica_lite_wp_enqueue_scripts() {
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'masonry' );
     wp_enqueue_script( 'nivo-lightbox.min', get_template_directory_uri() . '/js/nivo-lightbox.min.js', array(), '1.2.0', false );
     wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '3.7.2', false );
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_scripts_medica' );
+add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_scripts' );
 
 /**
  *  General Sidebar
