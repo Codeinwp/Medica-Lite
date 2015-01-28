@@ -25,7 +25,7 @@ The exceptions to this license are as follows:
 * Icomoon
 	https://icomoon.io/
 	Copyright (C) IcoMoon App (http://icomoon.io/) & Keyamoon
-+	License – GPL
+	License – GPL
 
 * js/html5shiv.js
 	Copyright (C) Copyright (c) 2014 Alexander Farkas (aFarkas)
