@@ -40,8 +40,7 @@ if ( !function_exists( 'medica_lite_setup' ) ) {
             'width'         => '180',
             'height'        => '60',
             'flex-height'   => true,
-            'header-text'   => true,
-            'default-image' => get_template_directory_uri() . '/images/header-logo.png'
+            'header-text'   => true
         );
         add_theme_support( "custom-header", $args_custom_header );
 
