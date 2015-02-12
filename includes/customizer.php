@@ -10,7 +10,7 @@ function medica_lite_customizer( $wp_customize ) {
     $wp_customize->get_setting( 'background_color' )->transport = 'refresh';
 
     // Frontpage - Subheader - Right Image note
-    class denta_lite_frontpage_subheader_rightimage_note extends WP_Customize_Control {
+    class medica_lite_frontpage_subheader_rightimage_note extends WP_Customize_Control {
         public function render_content() {
         	echo '<label for="medica_lite_frontpage_subheader_backgroundimage-button"><span class="customize-control-title">'. __( 'Right Image:', 'medica_lite' ) .'</span></label>';
             echo __( 'This feature is available in the <a href="'. esc_url( __( 'https://themeisle.com/themes/medica/', 'medica_lite' ) ) .'" title="premium version" target="_blank">premium version</a>.', 'medica_lite' );
@@ -18,7 +18,7 @@ function medica_lite_customizer( $wp_customize ) {
     }
 
     // Frontpage - Contact Form 7 - Title note
-    class denta_lite_frontpage_contactform7_title_note extends WP_Customize_Control {
+    class medica_lite_frontpage_contactform7_title_note extends WP_Customize_Control {
         public function render_content() {
         	echo '<label for="medica_lite_frontpage_subheader_backgroundimage-button"><span class="customize-control-title">'. __( 'Title:', 'medica_lite' ) .'</span></label>';
             echo __( 'This feature is available in the <a href="'. esc_url( __( 'https://themeisle.com/themes/medica/', 'medica_lite' ) ) .'" title="premium version" target="_blank">premium version</a>.', 'medica_lite' );
@@ -26,7 +26,7 @@ function medica_lite_customizer( $wp_customize ) {
     }
 
     // Frontpage - Contact Form 7 - Shortcode note
-    class denta_lite_frontpage_contactform7_shortcode_note extends WP_Customize_Control {
+    class medica_lite_frontpage_contactform7_shortcode_note extends WP_Customize_Control {
         public function render_content() {
         	echo '<label for="medica_lite_frontpage_subheader_backgroundimage-button"><span class="customize-control-title">'. __( 'Shortcode:', 'medica_lite' ) .'</span></label>';
             echo __( 'This feature is available in the <a href="'. esc_url( __( 'https://themeisle.com/themes/medica/', 'medica_lite' ) ) .'" title="premium version" target="_blank">premium version</a>.', 'medica_lite' );
@@ -34,7 +34,7 @@ function medica_lite_customizer( $wp_customize ) {
     }
 
     // Doctors Page note
-    class denta_lite_doctorspage_note extends WP_Customize_Control {
+    class medica_lite_doctorspage_note extends WP_Customize_Control {
         public function render_content() {
             echo __( 'This feature is available in the <a href="'. esc_url( __( 'https://themeisle.com/themes/medica/', 'medica_lite' ) ) .'" title="premium version" target="_blank">premium version</a>.', 'medica_lite' );
         }
@@ -208,7 +208,7 @@ function medica_lite_customizer( $wp_customize ) {
 				'sanitize_callback'	=> 'esc_textarea'
 			) );
 			$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'medica_lite_general_contactinfo_mapcode', array(
-			            'label' 	=> __( 'Map Code:', 'ti' ),
+			            'label' 	=> __( 'Map Code:', 'medica_lite' ),
 			            'section' 	=> 'medica_lite_general_contactinfo_section',
 			            'settings' 	=> 'medica_lite_general_contactinfo_mapcode',
 			            'priority' 	=> 5
@@ -296,7 +296,7 @@ function medica_lite_customizer( $wp_customize ) {
 				'default'			=> 'Copyright'
 			) );
 			$wp_customize->add_control( new Example_Customize_Textarea_Control( $wp_customize, 'medica_lite_general_footer_copyrightentry', array(
-			            'label' 	=> __( 'Copyright Entry:', 'ti' ),
+			            'label' 	=> __( 'Copyright Entry:', 'medica_lite' ),
 			            'section' 	=> 'medica_lite_general_footer_section',
 			            'settings' 	=> 'medica_lite_general_footer_copyrightentry',
 			            'priority' 	=> 5
@@ -331,7 +331,7 @@ function medica_lite_customizer( $wp_customize ) {
 			$wp_customize->add_setting( 'medica_lite_frontpage_subheader_rightimage', array(
 	            'sanitize_callback'	=>  'medica_lite_sanitize_text'
 	        ) );
-	        $wp_customize->add_control( new denta_lite_frontpage_subheader_rightimage_note ( $wp_customize,'medica_lite_frontpage_subheader_rightimage', array(
+	        $wp_customize->add_control( new medica_lite_frontpage_subheader_rightimage_note ( $wp_customize,'medica_lite_frontpage_subheader_rightimage', array(
 	        	'priority'	=> 1,
 	            'section'  	=> 'medica_lite_frontpage_subheader_section'
 	        ) ) );
@@ -430,7 +430,7 @@ function medica_lite_customizer( $wp_customize ) {
 			$wp_customize->add_setting( 'medica_lite_frontpage_contactform7_title', array(
 	            'sanitize_callback'	=>  'medica_lite_sanitize_text'
 	        ) );
-	        $wp_customize->add_control( new denta_lite_frontpage_contactform7_title_note ( $wp_customize,'medica_lite_frontpage_contactform7_title', array(
+	        $wp_customize->add_control( new medica_lite_frontpage_contactform7_title_note ( $wp_customize,'medica_lite_frontpage_contactform7_title', array(
 	        	'priority'	=> 1,
 	            'section'  	=> 'medica_lite_frontpage_contactform7_section'
 	        ) ) );
@@ -439,7 +439,7 @@ function medica_lite_customizer( $wp_customize ) {
 	        $wp_customize->add_setting( 'medica_lite_frontpage_contactform7_shortcode', array(
 	            'sanitize_callback'	=>  'medica_lite_sanitize_text'
 	        ) );
-	        $wp_customize->add_control( new denta_lite_frontpage_contactform7_shortcode_note ( $wp_customize,'medica_lite_frontpage_contactform7_shortcode', array(
+	        $wp_customize->add_control( new medica_lite_frontpage_contactform7_shortcode_note ( $wp_customize,'medica_lite_frontpage_contactform7_shortcode', array(
 	        	'priority'	=> 2,
 	            'section'  	=> 'medica_lite_frontpage_contactform7_section'
 	        ) ) );
@@ -869,7 +869,7 @@ function medica_lite_customizer( $wp_customize ) {
 		$wp_customize->add_setting( 'medica_lite_doctorspage_note', array(
 			'sanitize_callback'	=>  'medica_lite_sanitize_text'
 		) );
-		$wp_customize->add_control( new denta_lite_doctorspage_note ( $wp_customize,'medica_lite_doctorspage_note', array(
+		$wp_customize->add_control( new medica_lite_doctorspage_note ( $wp_customize,'medica_lite_doctorspage_note', array(
 			'priority'	=> 1,
 			'section'  	=> 'medica_lite_doctorspage_section'
 		) ) );
@@ -919,7 +919,7 @@ function medica_lite_customizer( $wp_customize ) {
 
 		// Entry
 		$wp_customize->add_setting( 'medica_lite_404_entry', array(
-			'default'           => __( 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">home page</a>.', 'denta_lite' ),
+			'default'           => __( 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'medica_lite' ) .'">home page</a>.', 'medica_lite' ),
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'refresh',
@@ -930,7 +930,7 @@ function medica_lite_customizer( $wp_customize ) {
 			'priority'      => 3,
 			'section'       => 'medica_lite_404_section',
 			'settings'      => 'medica_lite_404_entry',
-			 'label'         => __( 'Entry:', 'denta_lite' )
+			 'label'         => __( 'Entry:', 'medica_lite' )
 		) );
 
 }
