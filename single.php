@@ -60,7 +60,7 @@
 
 						<?php }
 					} else {
-						_e( 'No posts found', 'medica_lite' );
+						echo __( 'No posts found', 'medica_lite' );
 					}
 
 					?>

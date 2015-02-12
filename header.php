@@ -42,7 +42,7 @@
 								}
 
 								if ( get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) ) {
-									echo '<a href="tel:'. get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) .'" title="'. esc_attr( get_theme_mod( 'medica_lite_general_contactinfo_telephonetitle', 'Telephone' ) ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) .'</a>';
+									echo '<a href="tel:'. esc_attr( get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) ) .'" title="'. esc_attr( get_theme_mod( 'medica_lite_general_contactinfo_telephonetitle', 'Telephone' ) ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) .'</a>';
 								} else {
 									echo '<div style="margin-top: 24px;"></div>';
 								}

@@ -113,7 +113,7 @@
 									} else {
 
 										if ( get_theme_mod( 'medica_lite_frontpage_features_box1titlelink', '#' ) ) {
-											echo '<a href="'. get_theme_mod( 'medica_lite_frontpage_features_box1titlelink', '#' ) .'" class="heart"></a>';
+											echo '<a href="'. esc_url( get_theme_mod( 'medica_lite_frontpage_features_box1titlelink', '#' ) ) .'" class="heart"></a>';
 										} else {
 											echo '<i class="heart"></i>';
 										}
@@ -134,9 +134,7 @@
 									}
 
 									if ( get_theme_mod( 'medica_lite_frontpage_features_box1entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) {
-										echo '<p>'. get_theme_mod( 'medica_lite_frontpage_features_box1entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) .'</p>';
-									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
+										echo '<p>'. esc_textarea( get_theme_mod( 'medica_lite_frontpage_features_box1entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
@@ -175,15 +173,13 @@
 										if ( get_theme_mod( 'medica_lite_frontpage_features_box2titlelink', '#' ) ) {
 											echo '<a href="'. esc_url( get_theme_mod( 'medica_lite_frontpage_features_box2titlelink', '#' ) ) .'" title="'. get_theme_mod( 'medica_lite_frontpage_features_box2title', 'Dolor' ) .'">'. get_theme_mod( 'medica_lite_frontpage_features_box2title', 'Dolor' ) .'</a>';
 										} else {
-											echo '<span>'. get_theme_mod( 'medica_lite_frontpage_features_box2title', 'Dolor' ) .'</span>';
+											echo '<span>'. esc_attr( get_theme_mod( 'medica_lite_frontpage_features_box2title', 'Dolor' ) ) .'</span>';
 										}
 
 									}
 
 									if ( get_theme_mod( 'medica_lite_frontpage_features_box2entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) {
 										echo '<p>'. esc_textarea( get_theme_mod( 'medica_lite_frontpage_features_box2entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) .'</p>';
-									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
@@ -220,7 +216,7 @@
 									if ( get_theme_mod( 'medica_lite_frontpage_features_box3title', 'Lipsum' ) ) {
 
 										if ( get_theme_mod( 'medica_lite_frontpage_features_box3titlelink', '#' ) ) {
-											echo '<a href="'. get_theme_mod( 'medica_lite_frontpage_features_box3titlelink', '#' ) .'" title="'. esc_attr( get_theme_mod( 'medica_lite_frontpage_features_box3title', 'Lipsum' ) ) .'">'. esc_attr( get_theme_mod( 'medica_lite_frontpage_features_box3title', 'Lipsum' ) ) .'</a>';
+											echo '<a href="'. esc_url( get_theme_mod( 'medica_lite_frontpage_features_box3titlelink', '#' ) ) .'" title="'. esc_attr( get_theme_mod( 'medica_lite_frontpage_features_box3title', 'Lipsum' ) ) .'">'. esc_attr( get_theme_mod( 'medica_lite_frontpage_features_box3title', 'Lipsum' ) ) .'</a>';
 										} else {
 											echo '<span>'. esc_attr( get_theme_mod( 'medica_lite_frontpage_features_box3title', 'Lipsum' ) ) .'</span>';
 										}
@@ -229,8 +225,6 @@
 
 									if ( get_theme_mod( 'medica_lite_frontpage_features_box3entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) {
 										echo '<p>'. esc_textarea( get_theme_mod( 'medica_lite_frontpage_features_box3entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) .'</p>';
-									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
@@ -276,8 +270,6 @@
 
 									if ( get_theme_mod( 'medica_lite_frontpage_features_box4entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) {
 										echo '<p>'. esc_textarea( get_theme_mod( 'medica_lite_frontpage_features_box4entry', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus, mauris nec consectetur interdum, sapien lacus ultricies felis, id iaculis est urna et mi.' ) ) .'</p>';
-									} else {
-										echo '<p>'. __( 'Go to Appearance - Customize, to add content.', 'medica_lite' ) .'</p>';
 									}
 									?>
 								</div><!-- /div .info-div -->
