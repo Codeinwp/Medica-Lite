@@ -299,62 +299,65 @@
 				</section><!--/section #features-->
 
 			<?php }
-			?>
-			<section id="content">
-				<div class="wrapper cf">
-					<div id="latest-news">
-						<?php
-						if ( get_theme_mod( 'medica_lite_frontpage_latestnews_title', 'Latest News' ) ) {
-							echo '<h3>'. esc_attr( get_theme_mod( 'medica_lite_frontpage_latestnews_title', 'Latest News' ) ) .'</h3>';
-						}
 
-						$args = array (
-							'post_type'	=> 'post',
-						);
+			if ( !get_theme_mod( 'medica_lite_frontpage_latestnews_hide' ) ) {
 
-						$wp_query = new WP_Query( $args );
+				$args = array (
+					'post_type'              => 'post',
+				);
 
-						if ( $wp_query->have_posts() ) {
-							while ( $wp_query->have_posts() ) {
-								$wp_query->the_post();
-								$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+				$wp_query = new WP_Query( $args );
 
-								<div id="post-<?php the_ID(); ?>" <?php post_class( 'news cf' ); ?>>
+				if ( $wp_query->have_posts() ) { ?>
 
-									<?php
-									if ( $featured_image ) { ?>
+					<section id="content">
+						<div class="wrapper cf">
+							<div id="latest-news">
+								<?php
+								if ( get_theme_mod( 'medica_lite_frontpage_latestnews_title', 'Latest News' ) ) {
+									echo '<h3>'. esc_attr( get_theme_mod( 'medica_lite_frontpage_latestnews_title', 'Latest News' ) ) .'</h3>';
+								}
 
-										<div class="img-div">
-											<div class="news-image" style="background-image: url(<?php echo $featured_image[0]; ?>);">
-											</div> <!-- /div .news-image -->
-											<div class="link-img-news">
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"></a>
-											</div> <!-- /div link-img-news -->
-										</div> <!-- /div img-div -->
+								while ( $wp_query->have_posts() ) {
+									$wp_query->the_post(); ?>
 
-									<?php }
-									?>
+									<div id="post-<?php the_ID(); ?>" <?php post_class( 'news cf' ); ?>>
 
-									<div class="info-news">
-										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										<span><?php echo get_the_date(); ?></span>
-										<p><?php echo excerpt_limit(25); ?></p>
-									</div><!-- /div info-news -->
-								</div><!-- /div .news -->
+										<?php
+										if ( $featured_image ) { ?>
+
+											<div class="img-div">
+												<div class="news-image" style="background-image: url(<?php echo $featured_image[0]; ?>);">
+												</div> <!-- /div .news-image -->
+												<div class="link-img-news">
+													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"></a>
+												</div> <!-- /div link-img-news -->
+											</div> <!-- /div img-div -->
+
+										<?php }
+										?>
+
+										<div class="info-news">
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+											<span><?php echo get_the_date(); ?></span>
+											<p><?php echo excerpt_limit(25); ?></p>
+										</div><!-- /div info-news -->
+									</div><!-- /div .news -->
 
 								<?php }
-						} else {
-							_e( 'No posts found', 'medica_lite' );
-						}
+								?>
 
-						wp_reset_postdata();
-						?>
+							</div><!-- /div latest-news -->
+						</div><!--/div .wrapper-->
+					</section><!--/section #content-->
 
-					</div><!-- /div latest-news -->
-				</div><!--/div .wrapper-->
-			</section><!--/section #content-->
+				<?php }
 
-		<?php } ?>
+				wp_reset_postdata();
+
+			}
+
+		} ?>
 
 
 	<?php get_footer();

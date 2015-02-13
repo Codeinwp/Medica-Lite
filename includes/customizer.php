@@ -854,6 +854,20 @@ function medica_lite_customizer( $wp_customize ) {
 				'type'      => 'text'
 			) );
 
+			// Hide
+			$wp_customize->add_setting( 'medica_lite_frontpage_latestnews_hide', array(
+				'capability'        => 'edit_theme_options',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'medica_lite_sanitize_text',
+			) );
+			$wp_customize->add_control( 'medica_lite_frontpage_latestnews_hide', array(
+				'priority'  => 2,
+				'section'   => 'medica_lite_frontpage_latestnews_section',
+				'settings'  => 'medica_lite_frontpage_latestnews_hide',
+				'label'     => __( 'Hide this section?', 'mooveit_lite' ),
+				'type'      => 'checkbox'
+			) );
+
 	/**
 	 *	Doctors Page Section
 	 */
