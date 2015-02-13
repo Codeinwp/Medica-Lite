@@ -51,7 +51,7 @@
 							} else {
 
 								echo '<ul id="menu-footer">';
-								echo '<li><a href="'. home_url() .'" title="'. __( 'Home', 'medica_lite' ) .'">'. __( 'Home', 'medica_lite' ) .'</a></li>';
+								echo '<li><a href="'. esc_url( home_url() ) .'" title="'. __( 'Home', 'medica_lite' ) .'">'. __( 'Home', 'medica_lite' ) .'</a></li>';
 								wp_list_pages( array(
 										'title_li'	=> '',
 									)
@@ -105,7 +105,7 @@
 			</div><!--/div .wrapper-->
 			<div class="copyright-name">
 				<div class="wrapper">
-					<?php echo htmlspecialchars_decode( get_theme_mod( 'medica_lite_general_footer_copyrightentry', 'Copyright' ) ); ?> &copy; <a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a> | Proudly powered by <a href="http://www.wordpress.org" title="WordPress" target="_blank">WordPress</a>.
+					<?php echo htmlspecialchars_decode( get_theme_mod( 'medica_lite_general_footer_copyrightentry', 'Copyright' ) ); ?> &copy; <a href="https://themeisle.com/themes/medica-lite/" target="_blank" rel="nofollow"><?php _e( 'Medica Lite', 'medica_lite' ); ?></a> <?php _e('Proudly powered by','medica_lite'); ?> <a href="http://www.wordpress.org" title="WordPress" target="_blank"><?php _e('WordPress','medica_lite'); ?></a>.
 				</div><!--/div .wrapper-->
 			</div><!-- /div .copyright-name -->
 		</footer><!--/footer #footer-->

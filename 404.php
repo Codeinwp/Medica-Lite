@@ -31,8 +31,8 @@
 						</h3><!--/h3 .post-title-->
 						<div class="post-excerpt">
 							<?php
-							if ( get_theme_mod( 'medica_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">'. __( 'home page', 'medica_lite' ) .'</a>.' ) ) {
-								echo htmlspecialchars_decode( get_theme_mod( 'medica_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'denta_lite' ) .'">'. __( 'home page', 'medica_lite' ) .'</a>.' ) );
+							if ( get_theme_mod( 'medica_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'medica_lite' ) .'">'. __( 'home page', 'medica_lite' ) .'</a>.' ) ) {
+								echo htmlspecialchars_decode( get_theme_mod( 'medica_lite_404_entry', 'The page you are looking for does not exist, I can take you to the <a href="'. esc_url( home_url() ) .'" title="'. __( 'home page', 'medica_lite' ) .'">'. __( 'home page', 'medica_lite' ) .'</a>.' ) );
 							}
 							?>
 						</div><!--/div .post-excerpt-->

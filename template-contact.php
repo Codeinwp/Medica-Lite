@@ -37,7 +37,7 @@
 					  			}
 
 					  			if ( get_theme_mod( 'medica_lite_general_contactinfo_addressentry', 'Northwest Valley<br /> 35th Ave. at Northern<br /> 7805 N 35th Ave<br /> Phoenix, AZ 85051' ) ) {
-					  				echo '<span>'. get_theme_mod( 'medica_lite_general_contactinfo_addressentry', 'Northwest Valley<br /> 35th Ave. at Northern<br /> 7805 N 35th Ave<br /> Phoenix, AZ 85051' ) .'</span>';
+					  				echo '<span>'. esc_attr( get_theme_mod( 'medica_lite_general_contactinfo_addressentry', 'Northwest Valley<br /> 35th Ave. at Northern<br /> 7805 N 35th Ave<br /> Phoenix, AZ 85051' ) ) .'</span>';
 					  			}
 
 					  			if ( get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) ) {
@@ -81,7 +81,7 @@
 
 							<?php }
 					} else {
-						_e( 'No posts found', 'medica_lite' );
+						echo __( 'No posts found', 'medica_lite' );
 					}
 			  	?>
 			  	</div> <!-- /div #contact-content -->
