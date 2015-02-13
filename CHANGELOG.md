@@ -1,5 +1,38 @@
 
 
+### 1.2.5 - 13/02/2015
+
+ Changes: 
+
+
+ * Issue #78 (Screenshot) fixed
+
+[12.02.2015 21:08:33] Ionut Neagu:
+https://github.com/Codeinwp/Medica-Lite/blob/development/screenshot.png
+[12.02.2015 21:08:33] Ionut Neagu: aici screenshotul nu e gpl
+[12.02.2015 21:08:41] Ionut Neagu: si mai sunt multe chestii cred..
+ * Issue #74 (Verificare escape) fixed
+
+Verifica aici ca fiecare optiune sa fie trecuta prin escape'ul specific
+campului.
+ * Issue #75 (Style prefixes) fixed
+
+Verifica ca fiecare nume de stil sa aiba prefix, ca si la denta.
+ * Issue #76 (Verificare textdomain) fixed
+
+Verifica sa fie folosit mereu acelasi text domain.
+ * Issue #79 (Frontpage) fixed
+
+Trebuie șters "page-home.php" și de adăugat "front-page.php".
+ * Issue #77 (Latest news customizer) fixed
+
+Adaugare checkbox pentru latest news + conditie.
+ * Merge pull request #80 from robciucioan/development
+
+Development
+ * Renamed templates to template-name.php, fixed declaration of text domain, fixed text domains, archive title, customizer conditions for versions that not support panels
+
+
 ### 1.2.5 - 12/02/2015
 
  Changes: 
