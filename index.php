@@ -35,7 +35,7 @@
 
 								<?php
 								if ( $featured_image ) { ?>
-									<img src="<?php echo $featured_image[0]; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="featured-image" />
+									<img src="<?php echo esc_url( $featured_image[0] ); ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="featured-image" />
 								<?php }
 								?>
 

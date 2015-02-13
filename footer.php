@@ -51,7 +51,7 @@
 							} else {
 
 								echo '<ul id="menu-footer">';
-								echo '<li><a href="'. home_url() .'" title="'. __( 'Home', 'medica_lite' ) .'">'. __( 'Home', 'medica_lite' ) .'</a></li>';
+								echo '<li><a href="'. esc_url( home_url() ) .'" title="'. __( 'Home', 'medica_lite' ) .'">'. __( 'Home', 'medica_lite' ) .'</a></li>';
 								wp_list_pages( array(
 										'title_li'	=> '',
 									)
