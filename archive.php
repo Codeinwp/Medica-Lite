@@ -10,23 +10,55 @@
 				<div class="wrapper">
 					<h3>
 					<?php
-					$category_archive = get_the_category();
-					$author_archive = get_the_author();
-					$search_archive = get_search_query();
+						if ( is_category() ) :
+							single_cat_title();
 
-					if ( is_day() ) {
-						printf( __( '%s', 'medica_lite' ), get_the_date() );
-					} elseif ( is_month() ) {
-						printf( __( '%s', 'medica_lite' ), get_the_date( _x( 'F Y', '', 'medica_lite' ) ) );
-					} elseif ( is_year() ) {
-						printf( __( '%s.', 'medica_lite' ), get_the_date( _x( 'Y', '', 'medica_lite' ) ) );
-					} elseif ( is_category() ) {
-						echo single_cat_title();
-					} elseif ( is_author() ) {
-						echo $author_archive;
-					} else {
-						echo get_the_title();
-					}
+						elseif ( is_tag() ) :
+							single_tag_title();
+
+						elseif ( is_author() ) :
+							printf( __( 'Author: %s', 'medica_lite' ), '<span class="vcard">' . get_the_author() . '</span>' );
+
+						elseif ( is_day() ) :
+							printf( __( 'Day: %s', 'medica_lite' ), '<span>' . get_the_date() . '</span>' );
+
+						elseif ( is_month() ) :
+							printf( __( 'Month: %s', 'medica_lite' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'medica_lite' ) ) . '</span>' );
+
+						elseif ( is_year() ) :
+							printf( __( 'Year: %s', 'medica_lite' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'medica_lite' ) ) . '</span>' );
+
+						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
+							_e( 'Asides', 'medica_lite' );
+
+						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+							_e( 'Galleries', 'medica_lite');
+
+						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
+							_e( 'Images', 'medica_lite');
+
+						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
+							_e( 'Videos', 'medica_lite' );
+
+						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
+							_e( 'Quotes', 'medica_lite' );
+
+						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
+							_e( 'Links', 'medica_lite' );
+
+						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
+							_e( 'Statuses', 'medica_lite' );
+
+						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
+							_e( 'Audios', 'medica_lite' );
+
+						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
+							_e( 'Chats', 'medica_lite' );
+
+						else :
+							_e( 'Archives', 'medica_lite' );
+
+						endif;
 					?>
 					</h3><!--/h3-->
 				</div><!--/div .wrapper-->
@@ -49,7 +81,7 @@
 								</h3><!--/h3 .post-title-->
 								<div class="post-meta">
 									<span>
-										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( 'No responses', 'One comment', '% comments' ); ?>"><?php comments_number( 'No responses', 'One comment', '% comments' ); ?></a>
+										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?>"><?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?></a>
 									</span><!--/span-->
 								</div><!--/div .post-meta-->
 

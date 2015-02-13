@@ -31,6 +31,7 @@
 								?>
 								<div class="post-excerpt">
 									<?php the_content(); ?>
+									<?php wp_link_pages(); ?>
 								</div><!--/div .post-excerpt-->
 								<?php comments_template(); ?>
 							</div><!--/div .post-->

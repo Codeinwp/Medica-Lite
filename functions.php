@@ -53,7 +53,7 @@ if ( !function_exists( 'medica_lite_setup' ) ) {
         add_theme_support( "custom-background", $args_custom_background );
 
         // Load Plugin Textdomain
-        load_plugin_textdomain( 'medica-lite', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); // Load Text Domain
+		load_theme_textdomain('medica_lite', get_template_directory() . '/languages'); 
 
         // Header Navigation
         $header_navigation_args = array(
@@ -69,9 +69,6 @@ if ( !function_exists( 'medica_lite_setup' ) ) {
 
         // Add Editor Style
         add_editor_style();
-
-        // The Post Thumbnail
-        the_post_thumbnail();
 
     }
 
@@ -95,7 +92,7 @@ function medica_lite_wp_enqueue_style() {
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
     if ( is_rtl() ) {
-        wp_enqueue_style( 'rtl', get_template_directory_uri() . '/rtl.css', array(), '1.0' );
+        wp_enqueue_style( 'medica_lite_rtl', get_template_directory_uri() . '/rtl.css', array(), '1.0' );
     }
 
 }
