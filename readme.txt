@@ -42,7 +42,11 @@ The exceptions to this license are as follows:
 	http://www.google.com/fonts/specimen/Roboto
 	Apache License, version 2.0
 
-Nivo Lightbox
+* Nivo Lightbox
 	Copyright (c) 2013 Dev7studios
 	http://docs.dev7studios.com/jquery-plugins/nivo-lightbox
 	Nivo Lightbox jQuery plugin is open source and released under the MIT license
+
+* https://unsplash.imgix.net/photo-1416838375725-e834a83f62b7?q=75&fm=jpg&s=fc628c231023b391f54f10f92b859a0c
+	Copyright (C) Unsplash
+	License under CC0 (https://unsplash.com/license)
