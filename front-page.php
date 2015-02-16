@@ -319,7 +319,8 @@
 								}
 
 								while ( $wp_query->have_posts() ) {
-									$wp_query->the_post(); ?>
+									$wp_query->the_post();
+									$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
 									<div id="post-<?php the_ID(); ?>" <?php post_class( 'news cf' ); ?>>
 

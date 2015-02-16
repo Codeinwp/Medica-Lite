@@ -22,6 +22,23 @@ jQuery(document).ready(function($) {
 	    $('a.nivo-lightbox').nivoLightbox();
 	});
 
+	// Max height
+	var driMaxHeight = function( className ) {
+
+		arrayHeights = [];
+		var maxHeight = '';
+
+		jQuery( className ).each( function() {
+	    	var height = jQuery( this ).height();
+	    	arrayHeights.push( height );
+	    	maxHeight = Math.max.apply( null, arrayHeights );
+		});
+
+		jQuery( className ).css( "height", maxHeight );
+
+	};
+	driMaxHeight( "#content #latest-news .news .info-news" );
+
 });
 
 /**
