@@ -1,5 +1,22 @@
 
 
+### 1.2.5 - 16/02/2015
+
+ Changes: 
+
+
+ * Issue #82 (Screenshot) fixed
+
+Trebuie făcut screenshot cu imagine GPL.
+ * Issue #83 (Height on latest news) fixed
+
+Atunci când conținutul articolului este mai mare, aranjarea post-urilor
+nu se văd bine.
+ * Merge pull request #84 from robciucioan/development
+
+Development
+
+
 ### 1.2.5 - 13/02/2015
 
  Changes: 
