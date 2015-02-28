@@ -1,5 +1,13 @@
 
 
+### 1.2.6 - 28/02/2015
+
+ Changes: 
+
+
+ * removed rtl condition
+
+
 ### 1.2.5 - 16/02/2015
 
  Changes: 
