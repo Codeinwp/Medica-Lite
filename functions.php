@@ -91,10 +91,6 @@ function medica_lite_wp_enqueue_style() {
     wp_enqueue_style( 'medica_lite_font-family-roboto', '//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,900italic,900,700italic,700,500italic,500', array(), '1.0' );
     if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
-    if ( is_rtl() ) {
-        wp_enqueue_style( 'medica_lite_rtl', get_template_directory_uri() . '/rtl.css', array(), '1.0' );
-    }
-
 }
 add_action( 'wp_enqueue_scripts', 'medica_lite_wp_enqueue_style' );
 
