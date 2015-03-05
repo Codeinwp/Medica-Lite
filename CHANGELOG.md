@@ -1,5 +1,18 @@
 
 
+### 1.2.7 - 05/03/2015
+
+ Changes: 
+
+
+ * This fixes #88
+
+Screenshot replaced
+ * Merge pull request #89 from DragosBubu/development
+
+This fixes #88
+
+
 ### 1.2.6 - 28/02/2015
 
  Changes: 
