@@ -1792,7 +1792,8 @@ function medica_lite_registers() {
 	wp_enqueue_script( 'medica_lite_customizer_script' );
 	wp_localize_script( 'medica_lite_customizer_script', 'medica_lite_buttons', array(
 		'doc'			=> __( 'Documentation', 'medica_lite' ),
-		'pro'			=> __( 'View PRO Version', 'medica_lite' )
+		'pro'			=> __( 'View PRO Version', 'medica_lite' ),
+		'review'			=> __( 'Leave a review ( it will help us )', 'medica_lite' )
 	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'medica_lite_registers' );
