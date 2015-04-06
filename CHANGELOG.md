@@ -1,5 +1,13 @@
 
 
+### 1.2.8 - 06/04/2015
+
+ Changes: 
+
+
+ * Fixed #71, added Leave us a review button
+
+
 ### 1.2.7 - 05/03/2015
 
  Changes: 
