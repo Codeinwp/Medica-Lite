@@ -1,5 +1,13 @@
 
 
+### 1.2.10 - 02/07/2015
+
+ Changes: 
+
+
+ * Added bg color ( featured article section )
+
+
 ### 1.2.9 - 02/07/2015
 
  Changes: 
