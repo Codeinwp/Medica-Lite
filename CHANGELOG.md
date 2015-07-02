@@ -1,5 +1,13 @@
 
 
+### 1.2.9 - 02/07/2015
+
+ Changes: 
+
+
+ * Fixed #93 Menu issue on iPad
+
+
 ### 1.2.8 - 06/04/2015
 
  Changes: 
