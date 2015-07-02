@@ -485,6 +485,7 @@ body.custom-background {
   text-align: center;
   position: relative;
   float: left;
+  background-color: #FFF;
 }
 #subheader .second-subheader .second-subheader-image {
   width: 362px;
