@@ -48,7 +48,7 @@ if ( !function_exists( 'medica_lite_setup' ) ) {
 
         // Custom Background
         $args_custom_background = array(
-            'default-color'         => '#ffffff',
+            'default-color'         => '#f3f3f3',
             'default-repeat'        => 'no-repeat',
             'default-attachment'    => 'fixed'
         );
