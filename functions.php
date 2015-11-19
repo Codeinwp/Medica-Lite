@@ -37,10 +37,12 @@ if ( !function_exists( 'medica_lite_setup' ) ) {
 
         // Custom Header
         $args_custom_header = array(
-            'width'         => '180',
-            'height'        => '60',
-            'flex-height'   => true,
-            'header-text'   => true
+            'width'                 => '180',
+            'height'                => '60',
+            'flex-height'           => true,
+            'header-text'           => true,
+             'default-text-color'   => '646464',
+            'wp-head-callback'      => 'medica_header_style'
         );
         add_theme_support( "custom-header", $args_custom_header );
 
@@ -137,3 +139,26 @@ function medica_lite_html5shiv( $tag, $handle, $src ) {
     return $tag;
 }
 add_filter( 'script_loader_tag', 'medica_lite_html5shiv', 10, 3 );
+
+
+function medica_header_style() {
+
+    $header_image = get_header_image();
+    $text_color   = get_header_textcolor();
+
+    ?>
+    <style type="text/css" id="medica-header-css">
+    <?php
+
+        if ( $text_color != get_theme_support( 'custom-header', 'default-text-color' ) ) :
+    ?>
+        #header-top .header-left a.logo .logo-title,
+        #header-top .header-left a.logo .logo-description {
+            color: #<?php echo esc_attr( $text_color ); ?>;
+        }
+    <?php endif; ?>
+    </style>
+
+<?php
+
+}
