@@ -38,7 +38,7 @@
 
 						<?php }
 					} else {
-						echo __( 'No posts found', 'medica_lite' );
+						echo __( 'No posts found', 'medica-lite' );
 					}
 
 					?>

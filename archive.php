@@ -17,46 +17,46 @@
 							single_tag_title();
 
 						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'medica_lite' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Author: %s', 'medica-lite' ), '<span class="vcard">' . get_the_author() . '</span>' );
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'medica_lite' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Day: %s', 'medica-lite' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'medica_lite' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'medica_lite' ) ) . '</span>' );
+							printf( __( 'Month: %s', 'medica-lite' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'medica-lite' ) ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'medica_lite' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'medica_lite' ) ) . '</span>' );
+							printf( __( 'Year: %s', 'medica-lite' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'medica-lite' ) ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'medica_lite' );
+							_e( 'Asides', 'medica-lite' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'medica_lite');
+							_e( 'Galleries', 'medica-lite');
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'medica_lite');
+							_e( 'Images', 'medica-lite');
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'medica_lite' );
+							_e( 'Videos', 'medica-lite' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'medica_lite' );
+							_e( 'Quotes', 'medica-lite' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'medica_lite' );
+							_e( 'Links', 'medica-lite' );
 
 						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'medica_lite' );
+							_e( 'Statuses', 'medica-lite' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'medica_lite' );
+							_e( 'Audios', 'medica-lite' );
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'medica_lite' );
+							_e( 'Chats', 'medica-lite' );
 
 						else :
-							_e( 'Archives', 'medica_lite' );
+							_e( 'Archives', 'medica-lite' );
 
 						endif;
 					?>
@@ -81,7 +81,7 @@
 								</h3><!--/h3 .post-title-->
 								<div class="post-meta">
 									<span>
-										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?>"><?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?></a>
+										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica-lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica-lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica-lite' ); ?> <a href="#comments-template" title="<?php comments_number( __('No responses','medica-lite'), __('One comment','medica-lite'), __('% comments','medica-lite') ); ?>"><?php comments_number( __('No responses','medica-lite'), __('One comment','medica-lite'), __('% comments','medica-lite') ); ?></a>
 									</span><!--/span-->
 								</div><!--/div .post-meta-->
 
@@ -94,21 +94,21 @@
 								<div class="post-excerpt">
 									<?php the_excerpt(); ?>
 								</div><!--/div .post-excerpt-->
-								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'medica_lite' ); ?>" class="read-more">
-									<span><?php _e( 'Read More', 'medica_lite' ); ?></span>
+								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'medica-lite' ); ?>" class="read-more">
+									<span><?php _e( 'Read More', 'medica-lite' ); ?></span>
 								</a><!--/a .read-more-->
 							</div><!--/div .post-->
 
 						<?php }
 					} else {
-						_e( 'No posts found', 'medica_lite' );
+						_e( 'No posts found', 'medica-lite' );
 					}
 
 					?>
 
 					<div class="posts-navigation">
-						<?php next_posts_link(esc_attr__( 'Prev', 'medica_lite' )); ?>
-						<?php previous_posts_link(esc_attr__( 'Next', 'medica_lite' )); ?>
+						<?php next_posts_link(esc_attr__( 'Prev', 'medica-lite' )); ?>
+						<?php previous_posts_link(esc_attr__( 'Next', 'medica-lite' )); ?>
 					</div><!--/div .posts-navigation-->
 				</div><!--/div #posts-->
 				<?php get_sidebar(); ?>

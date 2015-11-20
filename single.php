@@ -9,7 +9,7 @@
 			<div class="wide-nav">
 				<div class="wrapper">
 					<h3>
-						<?php _e( 'Blog', 'medica_lite' ); ?>
+						<?php _e( 'Blog', 'medica-lite' ); ?>
 					</h3><!--/h3-->
 				</div><!--/div .wrapper-->
 			</div><!--/div .wide-nav-->
@@ -29,7 +29,7 @@
 								</h3><!--/h3 .post-title-->
 								<div class="post-meta">
 									<span>
-										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?>"><?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?></a>
+										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica-lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica-lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica-lite' ); ?> <a href="#comments-template" title="<?php comments_number( __('No responses','medica-lite'), __('One comment','medica-lite'), __('% comments','medica-lite') ); ?>"><?php comments_number( __('No responses','medica-lite'), __('One comment','medica-lite'), __('% comments','medica-lite') ); ?></a>
 									</span><!--/span-->
 								</div><!--/div .post-meta-->
 								<?php
@@ -43,14 +43,14 @@
 								</div><!--/div .post-excerpt-->
 								<?php
 									wp_link_pages( array(
-										'before'      => '<div class="post-links"><span class="post-links-title">' . __( 'Pages:', 'medica_lite' ) . '</span>',
+										'before'      => '<div class="post-links"><span class="post-links-title">' . __( 'Pages:', 'medica-lite' ) . '</span>',
 										'after'       => '</div>',
 										'link_before' => '<span>',
 										'link_after'  => '</span>',
 									) );
 								?>
 								<div class="post-tags">
-									<?php the_tags('<span>'.__('Tags:','medica_lite').'</span> '); ?>
+									<?php the_tags('<span>'.__('Tags:','medica-lite').'</span> '); ?>
 								</div><!--/div .post-tags-->
 								<div class="single-navigation cf">
 									<?php next_post_link('%link', 'Next Post', true); ?>
@@ -61,7 +61,7 @@
 
 						<?php }
 					} else {
-						echo __( 'No posts found', 'medica_lite' );
+						echo __( 'No posts found', 'medica-lite' );
 					}
 
 					?>

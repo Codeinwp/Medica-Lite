@@ -140,7 +140,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
          */
 
-        public $id = 'tgmpa';
+        public $id = 'medica-lite';
 
 
 
@@ -158,7 +158,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
          */
 
-        public $menu = 'tgmpa-install-plugins';
+        public $menu = 'medica-lite-install-plugins';
 
 
 
@@ -314,7 +314,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
          * Adds a reference of this object to $instance, populates default strings,
 
-         * does the tgmpa_init action hook, and hooks in the interactions to init.
+         * does the medica-lite_init action hook, and hooks in the interactions to init.
 
          *
 
@@ -344,7 +344,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             // Announce that the class is ready, and pass the object (for advanced use).
 
-            do_action_ref_array( 'tgmpa_init', array( $this ) );
+            do_action_ref_array( 'medica-lite_init', array( $this ) );
 
 
 
@@ -388,51 +388,51 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             $this->strings = array(
 
-                'page_title'                     => __( 'Install Required Plugins', 'tgmpa' ),
+                'page_title'                     => __( 'Install Required Plugins', 'medica-lite' ),
 
-                'menu_title'                     => __( 'Install Plugins', 'tgmpa' ),
+                'menu_title'                     => __( 'Install Plugins', 'medica-lite' ),
 
-                'installing'                     => __( 'Installing Plugin: %s', 'tgmpa' ),
+                'installing'                     => __( 'Installing Plugin: %s', 'medica-lite' ),
 
-                'oops'                           => __( 'Something went wrong.', 'tgmpa' ),
+                'oops'                           => __( 'Something went wrong.', 'medica-lite' ),
 
-                'notice_can_install_required'    => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'tgmpa' ),
+                'notice_can_install_required'    => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'medica-lite' ),
 
-                'notice_can_install_recommended' => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'tgmpa' ),
+                'notice_can_install_recommended' => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'medica-lite' ),
 
-                'notice_cannot_install'          => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'tgmpa' ),
+                'notice_cannot_install'          => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'medica-lite' ),
 
-                'notice_can_activate_required'   => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'tgmpa' ),
+                'notice_can_activate_required'   => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'medica-lite' ),
 
-                'notice_can_activate_recommended'=> _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'tgmpa' ),
+                'notice_can_activate_recommended'=> _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'medica-lite' ),
 
-                'notice_cannot_activate'         => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'tgmpa' ),
+                'notice_cannot_activate'         => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'medica-lite' ),
 
-                'notice_ask_to_update'           => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'tgmpa' ),
+                'notice_ask_to_update'           => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'medica-lite' ),
 
-                'notice_cannot_update'           => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'tgmpa' ),
+                'notice_cannot_update'           => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'medica-lite' ),
 
-                'install_link'                   => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'tgmpa' ),
+                'install_link'                   => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'medica-lite' ),
 
-                'activate_link'                  => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'tgmpa' ),
+                'activate_link'                  => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'medica-lite' ),
 
-                'return'                         => __( 'Return to Required Plugins Installer', 'tgmpa' ),
+                'return'                         => __( 'Return to Required Plugins Installer', 'medica-lite' ),
 
-                'dashboard'                      => __( 'Return to the dashboard', 'tgmpa' ),
+                'dashboard'                      => __( 'Return to the dashboard', 'medica-lite' ),
 
-                'plugin_activated'               => __( 'Plugin activated successfully.', 'tgmpa' ),
+                'plugin_activated'               => __( 'Plugin activated successfully.', 'medica-lite' ),
 
-                'activated_successfully'         => __( 'The following plugin was activated successfully:', 'tgmpa' ),
+                'activated_successfully'         => __( 'The following plugin was activated successfully:', 'medica-lite' ),
 
-                'complete'                       => __( 'All plugins installed and activated successfully. %1$s', 'tgmpa' ),
+                'complete'                       => __( 'All plugins installed and activated successfully. %1$s', 'medica-lite' ),
 
-                'dismiss'                        => __( 'Dismiss this notice', 'tgmpa' ),
+                'dismiss'                        => __( 'Dismiss this notice', 'medica-lite' ),
 
             );
 
 
 
-            do_action( 'tgmpa_register' );
+            do_action( 'medica-lite_register' );
 
             // After this point, the plugins should be registered and the configuration set.
 
@@ -470,7 +470,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 // Load admin bar in the header to remove flash when installing plugins.
 
-                if ( $this->is_tgmpa_page() ) {
+                if ( $this->is_medica-lite_page() ) {
 
                     remove_action( 'wp_footer', 'wp_admin_bar_render', 1000 );
 
@@ -542,7 +542,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
          *
 
-         * We get the links in the admin notices to point to the TGMPA page, rather
+         * We get the links in the admin notices to point to the medica-lite page, rather
 
          * than the typical plugin-install.php file, so we can prepare everything
 
@@ -572,7 +572,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
          * @global string $body_id Used as the iframe body ID, helps with styling
 
-         * @return null Returns early if not the TGMPA page.
+         * @return null Returns early if not the medica-lite page.
 
          */
 
@@ -580,7 +580,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-            if ( ! $this->is_tgmpa_page() ) {
+            if ( ! $this->is_medica-lite_page() ) {
 
                 return;
 
@@ -644,7 +644,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-            if ( ! get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) ) {
+            if ( ! get_user_meta( get_current_user_id(), 'medica-lite_dismissed_notice_' . $this->id, true ) ) {
 
                 add_thickbox();
 
@@ -756,13 +756,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             // Store new instance of plugin table in object.
 
-            $plugin_table = new TGMPA_List_Table;
+            $plugin_table = new medica-lite_List_Table;
 
 
 
             // Return early if processing a plugin installation action.
 
-            if ( isset( $_POST['action'] ) && 'tgmpa-bulk-install' == $_POST['action'] && $plugin_table->process_bulk_actions() || $this->do_plugin_install() ) {
+            if ( isset( $_POST['action'] ) && 'medica-lite-bulk-install' == $_POST['action'] && $plugin_table->process_bulk_actions() || $this->do_plugin_install() ) {
 
                 return;
 
@@ -772,7 +772,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             ?>
 
-            <div class="tgmpa wrap">
+            <div class="medica-lite wrap">
 
 
  
@@ -791,9 +791,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-                <form id="tgmpa-plugins" action="" method="post">
+                <form id="medica-lite-plugins" action="" method="post">
 
-                    <input type="hidden" name="tgmpa-page" value="<?php echo $this->menu; ?>" />
+                    <input type="hidden" name="medica-lite-page" value="<?php echo $this->menu; ?>" />
 
                     <?php $plugin_table->display(); ?>
 
@@ -863,9 +863,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             // Checks for actions from hover links to process the installation.
 
-            if ( isset( $_GET['plugin'] ) && ( isset( $_GET['tgmpa-install'] ) && 'install-plugin' == $_GET['tgmpa-install'] ) ) {
+            if ( isset( $_GET['plugin'] ) && ( isset( $_GET['medica-lite-install'] ) && 'install-plugin' == $_GET['medica-lite-install'] ) ) {
 
-                check_admin_referer( 'tgmpa-install' );
+                check_admin_referer( 'medica-lite-install' );
 
 
 
@@ -893,7 +893,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                             'plugin_source' => $plugin['source'],
 
-                            'tgmpa-install' => 'install-plugin',
+                            'medica-lite-install' => 'install-plugin',
 
                         ),
 
@@ -901,13 +901,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                     ),
 
-                    'tgmpa-install'
+                    'medica-lite-install'
 
                 );
 
                 $method = ''; // Leave blank so WP_Filesystem can populate it as necessary.
 
-                $fields = array( 'tgmpa-install' ); // Extra fields to pass to WP_Filesystem.
+                $fields = array( 'medica-lite-install' ); // Extra fields to pass to WP_Filesystem.
 
 
 
@@ -1079,7 +1079,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 if ( empty( $complete ) ) {
 
-                    echo '<p>' .  sprintf( $this->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', 'tgmpa' ) . '">' . __( 'Return to the Dashboard', 'tgmpa' ) . '</a>' ) . '</p>';
+                    echo '<p>' .  sprintf( $this->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', 'medica-lite' ) . '">' . __( 'Return to the Dashboard', 'medica-lite' ) . '</a>' ) . '</p>';
 
                     echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 
@@ -1093,9 +1093,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             // Checks for actions from hover links to process the activation.
 
-            elseif ( isset( $_GET['plugin'] ) && ( isset( $_GET['tgmpa-activate'] ) && 'activate-plugin' == $_GET['tgmpa-activate'] ) ) {
+            elseif ( isset( $_GET['plugin'] ) && ( isset( $_GET['medica-lite-activate'] ) && 'activate-plugin' == $_GET['medica-lite-activate'] ) ) {
 
-                check_admin_referer( 'tgmpa-activate', 'tgmpa-activate-nonce' );
+                check_admin_referer( 'medica-lite-activate', 'medica-lite-activate-nonce' );
 
 
 
@@ -1189,7 +1189,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             // Remove nag on the install page.
 
-            if ( $this->is_tgmpa_page() ) {
+            if ( $this->is_medica-lite_page() ) {
 
                 return;
 
@@ -1199,7 +1199,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             // Return early if the nag message has been dismissed.
 
-            if ( get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) ) {
+            if ( get_user_meta( get_current_user_id(), 'medica-lite_dismissed_notice_' . $this->id, true ) ) {
 
                 return;
 
@@ -1455,7 +1455,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-                    $rendered .= '<p>' . sprintf( translate_nooped_plural( $this->strings[$type], $count, 'tgmpa' ), $imploded, $count ) . '</p>';
+                    $rendered .= '<p>' . sprintf( translate_nooped_plural( $this->strings[$type], $count, 'medica-lite' ), $imploded, $count ) . '</p>';
 
                 }
 
@@ -1463,9 +1463,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 // Setup variables to determine if action links are needed.
 
-                $show_install_link  = $install_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( 'themes.php' ) ) . '">' . translate_nooped_plural( $this->strings['install_link'], $install_link_count, 'tgmpa' ) . '</a>' : '';
+                $show_install_link  = $install_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( 'themes.php' ) ) . '">' . translate_nooped_plural( $this->strings['install_link'], $install_link_count, 'medica-lite' ) . '</a>' : '';
 
-                $show_activate_link = $activate_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( 'themes.php' ) ) . '">' . translate_nooped_plural( $this->strings['activate_link'], $activate_link_count, 'tgmpa' ) . '</a>'  : '';
+                $show_activate_link = $activate_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( 'themes.php' ) ) . '">' . translate_nooped_plural( $this->strings['activate_link'], $activate_link_count, 'medica-lite' ) . '</a>'  : '';
 
 
 
@@ -1473,7 +1473,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 $action_links = apply_filters(
 
-                    'tgmpa_notice_action_links',
+                    'medica-lite_notice_action_links',
 
                     array(
 
@@ -1481,7 +1481,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                         'activate' => ( current_user_can( 'activate_plugins' ) ) ? $show_activate_link : '',
 
-                        'dismiss'  => $this->dismissable ? '<a class="dismiss-notice" href="' . add_query_arg( 'tgmpa-dismiss', 'dismiss_admin_notices' ) . '" target="_parent">' . $this->strings['dismiss'] . '</a>' : '',
+                        'dismiss'  => $this->dismissable ? '<a class="dismiss-notice" href="' . add_query_arg( 'medica-lite-dismiss', 'dismiss_admin_notices' ) . '" target="_parent">' . $this->strings['dismiss'] . '</a>' : '',
 
                     )
 
@@ -1505,11 +1505,11 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 if ( ! empty( $this->strings['nag_type'] ) ) {
 
-                    add_settings_error( 'tgmpa', 'tgmpa', $rendered, sanitize_html_class( strtolower( $this->strings['nag_type'] ) ) );
+                    add_settings_error( 'medica-lite', 'medica-lite', $rendered, sanitize_html_class( strtolower( $this->strings['nag_type'] ) ) );
 
                 } else {
 
-                    add_settings_error( 'tgmpa', 'tgmpa', $rendered, $nag_class );
+                    add_settings_error( 'medica-lite', 'medica-lite', $rendered, $nag_class );
 
                 }
 
@@ -1521,7 +1521,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
             if ( 'options-general' !== $current_screen->parent_base ) {
 
-                settings_errors( 'tgmpa' );
+                settings_errors( 'medica-lite' );
 
             }
 
@@ -1549,9 +1549,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-            if ( isset( $_GET['tgmpa-dismiss'] ) ) {
+            if ( isset( $_GET['medica-lite-dismiss'] ) ) {
 
-                update_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, 1 );
+                update_user_meta( get_current_user_id(), 'medica-lite_dismissed_notice_' . $this->id, 1 );
 
             }
 
@@ -1683,9 +1683,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-            // Remove action links on the TGMPA install page.
+            // Remove action links on the medica-lite install page.
 
-            if ( $this->is_tgmpa_page() ) {
+            if ( $this->is_medica-lite_page() ) {
 
                 return false;
 
@@ -1849,7 +1849,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
         /**
 
-         * Determine if we're on the TGMPA Install page.
+         * Determine if we're on the medica-lite Install page.
 
          *
 
@@ -1857,11 +1857,11 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
          *
 
-         * @return boolean True when on the TGMPA page, false otherwise.
+         * @return boolean True when on the medica-lite page, false otherwise.
 
          */
 
-        protected function is_tgmpa_page() {
+        protected function is_medica-lite_page() {
 
 
 
@@ -1901,7 +1901,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-            delete_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id );
+            delete_user_meta( get_current_user_id(), 'medica-lite_dismissed_notice_' . $this->id );
 
 
 
@@ -2069,7 +2069,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
     // Ensure only one instance of the class is ever invoked.
 
-    $tgmpa = TGM_Plugin_Activation::get_instance();
+    $medica-lite = TGM_Plugin_Activation::get_instance();
 
 
 
@@ -2077,7 +2077,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 
 
-if ( ! function_exists( 'tgmpa' ) ) {
+if ( ! function_exists( 'medica-lite' ) ) {
 
     /**
 
@@ -2097,7 +2097,7 @@ if ( ! function_exists( 'tgmpa' ) ) {
 
      */
 
-    function tgmpa( $plugins, $config = array() ) {
+    function medica-lite( $plugins, $config = array() ) {
 
 
 
@@ -2143,7 +2143,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
 
 
 
-if ( ! class_exists( 'TGMPA_List_Table' ) ) {
+if ( ! class_exists( 'medica-lite_List_Table' ) ) {
 
     /**
 
@@ -2179,7 +2179,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
      */
 
-    class TGMPA_List_Table extends WP_List_Table {
+    class medica-lite_List_Table extends WP_List_Table {
 
 
 
@@ -2189,7 +2189,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
          *
 
-         * The constructor also grabs a copy of $instance from the TGMPA class
+         * The constructor also grabs a copy of $instance from the medica-lite class
 
          * and stores it in the global object TGM_Plugin_Activation::$instance.
 
@@ -2339,13 +2339,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                     if ( preg_match( '|^http(s)?://|', $plugin['source'] ) ) {
 
-                        $table_data[$i]['source'] = __( 'Private Repository', 'tgmpa' );
+                        $table_data[$i]['source'] = __( 'Private Repository', 'medica-lite' );
 
                     // The plugin is pre-packaged with the theme.
 
                     } else {
 
-                        $table_data[$i]['source'] = __( 'Pre-Packaged', 'tgmpa' );
+                        $table_data[$i]['source'] = __( 'Pre-Packaged', 'medica-lite' );
 
                     }
 
@@ -2355,23 +2355,23 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                 else {
 
-                    $table_data[$i]['source'] = __( 'WordPress Repository', 'tgmpa' );
+                    $table_data[$i]['source'] = __( 'WordPress Repository', 'medica-lite' );
 
                 }
 
 
 
-                $table_data[$i]['type'] = isset( $plugin['required'] ) && $plugin['required'] ? __( 'Required', 'tgmpa' ) : __( 'Recommended', 'tgmpa' );
+                $table_data[$i]['type'] = isset( $plugin['required'] ) && $plugin['required'] ? __( 'Required', 'medica-lite' ) : __( 'Recommended', 'medica-lite' );
 
 
 
                 if ( ! isset( $installed_plugins[$plugin['file_path']] ) ) {
 
-                    $table_data[$i]['status'] = sprintf( '%1$s', __( 'Not Installed', 'tgmpa' ) );
+                    $table_data[$i]['status'] = sprintf( '%1$s', __( 'Not Installed', 'medica-lite' ) );
 
                 } elseif ( is_plugin_inactive( $plugin['file_path'] ) ) {
 
-                    $table_data[$i]['status'] = sprintf( '%1$s', __( 'Installed But Not Activated', 'tgmpa' ) );
+                    $table_data[$i]['status'] = sprintf( '%1$s', __( 'Installed But Not Activated', 'medica-lite' ) );
 
                 }
 
@@ -2571,7 +2571,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                     'install' => sprintf(
 
-                        '<a href="%1$s" title="' . __( 'Install', 'tgmpa' ) . ' %2$s">' . __( 'Install', 'tgmpa' ) . '</a>',
+                        '<a href="%1$s" title="' . __( 'Install', 'medica-lite' ) . ' %2$s">' . __( 'Install', 'medica-lite' ) . '</a>',
 
                         wp_nonce_url(
 
@@ -2587,7 +2587,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                                     'plugin_source' => $item['url'],
 
-                                    'tgmpa-install' => 'install-plugin',
+                                    'medica-lite-install' => 'install-plugin',
 
                                 ),
 
@@ -2595,7 +2595,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                             ),
 
-                            'tgmpa-install'
+                            'medica-lite-install'
 
                         ),
 
@@ -2615,7 +2615,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                     'activate' => sprintf(
 
-                        '<a href="%1$s" title="' . __( 'Activate', 'tgmpa' ) . ' %2$s">' . __( 'Activate', 'tgmpa' ) . '</a>',
+                        '<a href="%1$s" title="' . __( 'Activate', 'medica-lite' ) . ' %2$s">' . __( 'Activate', 'medica-lite' ) . '</a>',
 
                         add_query_arg(
 
@@ -2629,9 +2629,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                                 'plugin_source'        => $item['url'],
 
-                                'tgmpa-activate'       => 'activate-plugin',
+                                'medica-lite-activate'       => 'activate-plugin',
 
-                                'tgmpa-activate-nonce' => wp_create_nonce( 'tgmpa-activate' ),
+                                'medica-lite-activate-nonce' => wp_create_nonce( 'medica-lite-activate' ),
 
                             ),
 
@@ -2713,7 +2713,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 
 
-            printf( __( 'No plugins to install or activate. <a href="%1$s" title="Return to the Dashboard">Return to the Dashboard</a>', 'tgmpa' ), admin_url() );
+            printf( __( 'No plugins to install or activate. <a href="%1$s" title="Return to the Dashboard">Return to the Dashboard</a>', 'medica-lite' ), admin_url() );
 
             echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 
@@ -2745,13 +2745,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                 'cb'     => '<input type="checkbox" />',
 
-                'plugin' => __( 'Plugin', 'tgmpa' ),
+                'plugin' => __( 'Plugin', 'medica-lite' ),
 
-                'source' => __( 'Source', 'tgmpa' ),
+                'source' => __( 'Source', 'medica-lite' ),
 
-                'type'   => __( 'Type', 'tgmpa' ),
+                'type'   => __( 'Type', 'medica-lite' ),
 
-                'status' => __( 'Status', 'tgmpa' )
+                'status' => __( 'Status', 'medica-lite' )
 
             );
 
@@ -2787,9 +2787,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
             $actions = array(
 
-                'tgmpa-bulk-install'  => __( 'Install', 'tgmpa' ),
+                'medica-lite-bulk-install'  => __( 'Install', 'medica-lite' ),
 
-                'tgmpa-bulk-activate' => __( 'Activate', 'tgmpa' ),
+                'medica-lite-bulk-activate' => __( 'Activate', 'medica-lite' ),
 
             );
 
@@ -2827,7 +2827,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
             // Bulk installation process.
 
-            if ( 'tgmpa-bulk-install' === $this->current_action() ) {
+            if ( 'medica-lite-bulk-install' === $this->current_action() ) {
 
                 check_admin_referer( 'bulk-' . $this->_args['plural'] );
 
@@ -3007,7 +3007,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                 if ( empty( $plugin_installs ) ) {
 
-                    echo '<div id="message" class="error"><p>' . __( 'No plugins are available to be installed at this time.', 'tgmpa' ) . '</p></div>';
+                    echo '<div id="message" class="error"><p>' . __( 'No plugins are available to be installed at this time.', 'medica-lite' ) . '</p></div>';
 
                     return false;
 
@@ -3045,7 +3045,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                             'page'          => TGM_Plugin_Activation::$instance->menu,
 
-                            'tgmpa-action'  => 'install-selected',
+                            'medica-lite-action'  => 'install-selected',
 
                             'plugins'       => urlencode( implode( ',', $plugins ) ),
 
@@ -3103,13 +3103,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 
 
-                // Loop through each plugin to install and try to grab information from WordPress API, if not create 'tgmpa-empty' scalar.
+                // Loop through each plugin to install and try to grab information from WordPress API, if not create 'medica-lite-empty' scalar.
 
                 $i = 0;
 
                 foreach ( $plugin_installs as $plugin ) {
 
-                    $api[$i] = plugins_api( 'plugin_information', array( 'slug' => $plugin, 'fields' => array( 'sections' => false ) ) ) ? plugins_api( 'plugin_information', array( 'slug' => $plugin, 'fields' => array( 'sections' => false ) ) ) : (object) $api[$i] = 'tgmpa-empty';
+                    $api[$i] = plugins_api( 'plugin_information', array( 'slug' => $plugin, 'fields' => array( 'sections' => false ) ) ) ? plugins_api( 'plugin_information', array( 'slug' => $plugin, 'fields' => array( 'sections' => false ) ) ) : (object) $api[$i] = 'medica-lite-empty';
 
                     $i++;
 
@@ -3157,7 +3157,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                 // Wrap the install process with the appropriate HTML.
 
-                echo '<div class="tgmpa wrap">';
+                echo '<div class="medica-lite wrap">';
 
                      
 
@@ -3179,7 +3179,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
             // Bulk activation process.
 
-            if ( 'tgmpa-bulk-activate' === $this->current_action() ) {
+            if ( 'medica-lite-bulk-activate' === $this->current_action() ) {
 
                 check_admin_referer( 'bulk-' . $this->_args['plural'] );
 
@@ -3219,7 +3219,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                 if ( empty( $plugins_to_activate ) ) {
 
-                    echo '<div id="message" class="error"><p>' . __( 'No plugins are available to be activated at this time.', 'tgmpa' ) . '</p></div>';
+                    echo '<div id="message" class="error"><p>' . __( 'No plugins are available to be activated at this time.', 'medica-lite' ) . '</p></div>';
 
                     return false;
 
@@ -3263,7 +3263,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                 } else {
 
-                    printf( '<div id="message" class="updated"><p>%1$s %2$s.</p></div>', _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'tgmpa' ), $imploded );
+                    printf( '<div id="message" class="updated"><p>%1$s %2$s.</p></div>', _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'medica-lite' ), $imploded );
 
                 }
 
@@ -3369,9 +3369,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
  */
 
-add_action( 'admin_init', 'tgmpa_load_bulk_installer' );
+add_action( 'admin_init', 'medica-lite_load_bulk_installer' );
 
-function tgmpa_load_bulk_installer() {
+function medica-lite_load_bulk_installer() {
 
 
 
@@ -3599,7 +3599,7 @@ function tgmpa_load_bulk_installer() {
 
                  * This method also activates the plugin in the automatic flag has been
 
-                 * set to true for the TGMPA class.
+                 * set to true for the medica-lite class.
 
                  *
 
@@ -3855,17 +3855,17 @@ function tgmpa_load_bulk_installer() {
 
 
 
-                    $this->strings['no_package']          = __( 'Install package not available.', 'tgmpa' );
+                    $this->strings['no_package']          = __( 'Install package not available.', 'medica-lite' );
 
-                    $this->strings['downloading_package'] = __( 'Downloading install package from <span class="code">%s</span>&#8230;', 'tgmpa' );
+                    $this->strings['downloading_package'] = __( 'Downloading install package from <span class="code">%s</span>&#8230;', 'medica-lite' );
 
-                    $this->strings['unpack_package']      = __( 'Unpacking the package&#8230;', 'tgmpa' );
+                    $this->strings['unpack_package']      = __( 'Unpacking the package&#8230;', 'medica-lite' );
 
-                    $this->strings['installing_package']  = __( 'Installing the plugin&#8230;', 'tgmpa' );
+                    $this->strings['installing_package']  = __( 'Installing the plugin&#8230;', 'medica-lite' );
 
-                    $this->strings['process_failed']      = __( 'Plugin install failed.', 'tgmpa' );
+                    $this->strings['process_failed']      = __( 'Plugin install failed.', 'medica-lite' );
 
-                    $this->strings['process_success']     = __( 'Plugin installed successfully.', 'tgmpa' );
+                    $this->strings['process_success']     = __( 'Plugin installed successfully.', 'medica-lite' );
 
 
 
@@ -3887,9 +3887,9 @@ function tgmpa_load_bulk_installer() {
 
 
 
-                    $this->strings['activation_failed']  = __( 'Plugin activation failed.', 'tgmpa' );
+                    $this->strings['activation_failed']  = __( 'Plugin activation failed.', 'medica-lite' );
 
-                    $this->strings['activation_success'] = __( 'Plugin activated successfully.', 'tgmpa' );
+                    $this->strings['activation_success'] = __( 'Plugin activated successfully.', 'medica-lite' );
 
 
 
@@ -4115,13 +4115,13 @@ function tgmpa_load_bulk_installer() {
 
                     if ( TGM_Plugin_Activation::$instance->is_automatic ) {
 
-                        $this->upgrader->strings['skin_upgrade_start']        = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'tgmpa' );
+                        $this->upgrader->strings['skin_upgrade_start']        = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'medica-lite' );
 
-                        $this->upgrader->strings['skin_update_successful']    = __( '%1$s installed and activated successfully.', 'tgmpa' ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', 'tgmpa' ) . '</span><span class="hidden">' . __( 'Hide Details', 'tgmpa' ) . '</span>.</a>';
+                        $this->upgrader->strings['skin_update_successful']    = __( '%1$s installed and activated successfully.', 'medica-lite' ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', 'medica-lite' ) . '</span><span class="hidden">' . __( 'Hide Details', 'medica-lite' ) . '</span>.</a>';
 
-                        $this->upgrader->strings['skin_upgrade_end']          = __( 'All installations and activations have been completed.', 'tgmpa' );
+                        $this->upgrader->strings['skin_upgrade_end']          = __( 'All installations and activations have been completed.', 'medica-lite' );
 
-                        $this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'tgmpa' );
+                        $this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'medica-lite' );
 
                     }
 
@@ -4129,17 +4129,17 @@ function tgmpa_load_bulk_installer() {
 
                     else {
 
-                        $this->upgrader->strings['skin_upgrade_start']        = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'tgmpa' );
+                        $this->upgrader->strings['skin_upgrade_start']        = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'medica-lite' );
 
-                        $this->upgrader->strings['skin_update_failed_error']  = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'tgmpa' );
+                        $this->upgrader->strings['skin_update_failed_error']  = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'medica-lite' );
 
-                        $this->upgrader->strings['skin_update_failed']        = __( 'The installation of %1$s failed.', 'tgmpa' );
+                        $this->upgrader->strings['skin_update_failed']        = __( 'The installation of %1$s failed.', 'medica-lite' );
 
-                        $this->upgrader->strings['skin_update_successful']    = __( '%1$s installed successfully.', 'tgmpa' ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', 'tgmpa' ) . '</span><span class="hidden">' . __( 'Hide Details', 'tgmpa' ) . '</span>.</a>';
+                        $this->upgrader->strings['skin_update_successful']    = __( '%1$s installed successfully.', 'medica-lite' ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', 'medica-lite' ) . '</span><span class="hidden">' . __( 'Hide Details', 'medica-lite' ) . '</span>.</a>';
 
-                        $this->upgrader->strings['skin_upgrade_end']          = __( 'All installations have been completed.', 'tgmpa' );
+                        $this->upgrader->strings['skin_upgrade_end']          = __( 'All installations have been completed.', 'medica-lite' );
 
-                        $this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'tgmpa' );
+                        $this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'medica-lite' );
 
                     }
 
@@ -4323,7 +4323,7 @@ function tgmpa_load_bulk_installer() {
 
                     if ( empty( $complete ) ) {
 
-                        echo '<p>' .  sprintf( TGM_Plugin_Activation::$instance->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', 'tgmpa' ) . '">' . __( 'Return to the Dashboard', 'tgmpa' ) . '</a>' ) . '</p>';
+                        echo '<p>' .  sprintf( TGM_Plugin_Activation::$instance->strings['complete'], '<a href="' . admin_url() . '" title="' . __( 'Return to the Dashboard', 'medica-lite' ) . '">' . __( 'Return to the Dashboard', 'medica-lite' ) . '</a>' ) . '</p>';
 
                         echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 

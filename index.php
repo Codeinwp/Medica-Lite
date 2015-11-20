@@ -29,7 +29,7 @@
 								</h3><!--/h3 .post-title-->
 								<div class="post-meta">
 									<span>
-										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica_lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica_lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica_lite' ); ?> <a href="#comments-template" title="<?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?>"><?php comments_number( __('No responses','medica_lite'), __('One comment','medica_lite'), __('% comments','medica_lite') ); ?></a>
+										<?php echo get_the_date(); ?> <?php _e( '- Posted by:', 'medica-lite' ); ?> <a href="" title="<?php the_author(); ?>"><?php the_author_posts_link(); ?></a> <?php _e( '- In category:', 'medica-lite' ); ?> <?php the_category(', '); ?> <?php _e( '-', 'medica-lite' ); ?> <a href="#comments-template" title="<?php comments_number( __('No responses','medica-lite'), __('One comment','medica-lite'), __('% comments','medica-lite') ); ?>"><?php comments_number( __('No responses','medica-lite'), __('One comment','medica-lite'), __('% comments','medica-lite') ); ?></a>
 									</span><!--/span-->
 								</div><!--/div .post-meta-->
 
@@ -42,21 +42,21 @@
 								<div class="post-excerpt">
 									<?php the_excerpt(); ?>
 								</div><!--/div .post-excerpt-->
-								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'medica_lite' ); ?>" class="read-more">
-									<span><?php _e( 'Read More', 'medica_lite' ); ?></span>
+								<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read More', 'medica-lite' ); ?>" class="read-more">
+									<span><?php _e( 'Read More', 'medica-lite' ); ?></span>
 								</a><!--/a .read-more-->
 							</div><!--/div .post-->
 
 						<?php }
 					} else {
-						_e( 'No posts found', 'medica_lite' );
+						_e( 'No posts found', 'medica-lite' );
 					}
 
 					?>
 
 					<div class="posts-navigation">
-						<?php next_posts_link(esc_attr__( 'Prev', 'medica_lite' )); ?>
-						<?php previous_posts_link(esc_attr__( 'Next', 'medica_lite' )); ?>
+						<?php next_posts_link(esc_attr__( 'Prev', 'medica-lite' )); ?>
+						<?php previous_posts_link(esc_attr__( 'Next', 'medica-lite' )); ?>
 					</div><!--/div .posts-navigation-->
 				</div><!--/div #posts-->
 				<?php get_sidebar(); ?>
