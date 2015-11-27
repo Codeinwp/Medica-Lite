@@ -1,5 +1,13 @@
 
 
+### 1.2.11 - 27/11/2015
+
+ Changes: 
+
+
+ * Fixed #97 Header text colors does not change
+
+
 ### 1.2.10 - 02/07/2015
 
  Changes: 
