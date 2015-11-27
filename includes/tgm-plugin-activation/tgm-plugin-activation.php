@@ -1,40 +1,12 @@
 <?php
 /**
- * This file represents an example of the code that themes would use to register
- * the required plugins.
- *
- * It is expected that theme authors would copy and paste this code into their
- * functions.php file, and amend to suit.
- *
- * @package    TGM-Plugin-Activation
- * @subpackage Example
- * @version    2.4.0
- * @author     Thomas Griffin <thomasgriffinmedia.com>
- * @author     Gary Jones <gamajo.com>
- * @copyright  Copyright (c) 2014, Thomas Griffin
- * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
- * @link       https://github.com/thomasgriffin/TGM-Plugin-Activation
- */
-
-/**
  * Include the TGM_Plugin_Activation class.
  */
 require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
-/**
- * Register the required plugins for this theme.
- *
- * In this example, we register two plugins - one included with the TGMPA library
- * and one from the .org repo.
- *
- * The variable passed to tgmpa_register_plugins() should be an array of plugin
- * arrays.
- *
- * This function is hooked into tgmpa_init, which is fired within the
- * TGM_Plugin_Activation class constructor.
- */
-function my_theme_register_required_plugins() {
+add_action( 'tgmpa_register', 'medica_lite_register_required_plugins' );
+
+function medica_lite_register_required_plugins() {
 
     /**
      * Array of plugin arrays. Required keys are name and slug.
@@ -67,10 +39,10 @@ function my_theme_register_required_plugins() {
         'is_automatic' => false,                   // Automatically activate plugins after installation or not.
         'message'      => '',                      // Message to output right before the plugins table.
         'strings'      => array(
-            'page_title'                      => __( 'Install Required Plugins', 'tgmpa' ),
-            'menu_title'                      => __( 'Install Plugins', 'tgmpa' ),
-            'installing'                      => __( 'Installing Plugin: %s', 'tgmpa' ), // %s = plugin name.
-            'oops'                            => __( 'Something went wrong with the plugin API.', 'tgmpa' ),
+            'page_title'                      => __( 'Install Required Plugins', 'medica-lite' ),
+            'menu_title'                      => __( 'Install Plugins', 'medica-lite' ),
+            'installing'                      => __( 'Installing Plugin: %s', 'medica-lite' ), // %s = plugin name.
+            'oops'                            => __( 'Something went wrong with the plugin API.', 'medica-lite' ),
             'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'medica-lite' ), // %1$s = plugin name(s).
             'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'medica-lite' ), // %1$s = plugin name(s).
             'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'medica-lite' ), // %1$s = plugin name(s).

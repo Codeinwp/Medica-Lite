@@ -35,34 +35,34 @@
 							</a><!--/a .logo-->
 							<div class="header-contact">
 								<?php
-								if ( get_theme_mod( 'medica-lite_general_contactinfo_telephonetitle', 'Telephone' ) ) {
-									echo esc_attr( get_theme_mod( 'medica-lite_general_contactinfo_telephonetitle', 'Telephone' ) ) . '<br />';
+								if ( get_theme_mod( 'medica_lite_general_contactinfo_telephonetitle', 'Telephone' ) ) {
+									echo esc_attr( get_theme_mod( 'medica_lite_general_contactinfo_telephonetitle', 'Telephone' ) ) . '<br />';
 								} else {
 									echo '<br />';
 								}
 
-								if ( get_theme_mod( 'medica-lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) ) {
-									echo '<a href="tel:'. esc_attr( get_theme_mod( 'medica-lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) ) .'" title="'. esc_attr( get_theme_mod( 'medica-lite_general_contactinfo_telephonetitle', 'Telephone' ) ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'medica-lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) .'</a>';
+								if ( get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) ) {
+									echo '<a href="tel:'. esc_attr( get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) ) .'" title="'. esc_attr( get_theme_mod( 'medica_lite_general_contactinfo_telephonetitle', 'Telephone' ) ) .'"><i class="icon-phone"></i> '. get_theme_mod( 'medica_lite_general_contactinfo_telephonenumber', '+1 223 456 23' ) .'</a>';
 								} else {
 									echo '<div style="margin-top: 24px;"></div>';
 								}
 								?>
 								<ul class="cf">
 									<?php
-									if ( get_theme_mod( 'medica-lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) {
-										echo '<li class="header-facebook-icon"><a href="'. esc_url( get_theme_mod( 'medica-lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) .'" title="'. __( 'Facebook', 'medica-lite' ) .'" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) {
+										echo '<li class="header-facebook-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) .'" title="'. __( 'Facebook', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
-									if ( get_theme_mod( 'medica-lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) {
-										echo '<li class="header-twitter-icon"><a href="'. esc_url( get_theme_mod( 'medica-lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) .'" title="'. __( 'Twitter', 'medica-lite' ) .'" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) {
+										echo '<li class="header-twitter-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) .'" title="'. __( 'Twitter', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
-									if ( get_theme_mod( 'medica-lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) {
-										echo '<li class="header-youtube-icon"><a href="'. esc_url( get_theme_mod( 'medica-lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) .'" title="'. __( 'YouTube', 'medica-lite' ) .'" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) {
+										echo '<li class="header-youtube-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) .'" title="'. __( 'YouTube', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
-									if ( get_theme_mod( 'medica-lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) {
-										echo '<li class="header-linkedin-icon"><a href="'. esc_url( get_theme_mod( 'medica-lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) .'" title="'. __( 'LinkedIn', 'medica-lite' ) .'" target="_blank"></a></li>';
+									if ( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) {
+										echo '<li class="header-linkedin-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) .'" title="'. __( 'LinkedIn', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 									?>
 								</ul>

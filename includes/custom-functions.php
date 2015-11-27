@@ -3,43 +3,43 @@
 /**
  *	Posts Link Attributes Prev
  */
-function medica-lite_posts_link_attributes_prev() {
+function medica_lite_posts_link_attributes_prev() {
     return 'class="left-navigation"';
 }
-add_filter('next_posts_link_attributes', 'medica-lite_posts_link_attributes_prev');
+add_filter('next_posts_link_attributes', 'medica_lite_posts_link_attributes_prev');
 
 /**
  *	Posts Link Attributes Next
  */
-function medica-lite_posts_link_attributes_next() {
+function medica_lite_posts_link_attributes_next() {
     return 'class="right-navigation"';
 }
-add_filter('previous_posts_link_attributes', 'medica-lite_posts_link_attributes_next');
+add_filter('previous_posts_link_attributes', 'medica_lite_posts_link_attributes_next');
 
 /**
  *	Posts Link Next Class
  */
-function medica-lite_posts_link_next_class($format){
+function medica_lite_posts_link_next_class($format){
      $format = str_replace('href=', 'class="next-post" href=', $format);
      return $format;
 }
-add_filter('next_post_link', 'medica-lite_posts_link_next_class');
+add_filter('next_post_link', 'medica_lite_posts_link_next_class');
 
 /**
  *	Posts Link Prev Class
  */
-function medica-lite_posts_link_prev_class($format) {
+function medica_lite_posts_link_prev_class($format) {
      $format = str_replace('href=', 'class="previous-post" href=', $format);
      return $format;
 }
-add_filter('previous_post_link', 'medica-lite_posts_link_prev_class');
+add_filter('previous_post_link', 'medica_lite_posts_link_prev_class');
 
 /**
  *	Comments
  */
-if ( ! function_exists( 'medica-lite_comments' ) ) :
+if ( ! function_exists( 'medica_lite_comments' ) ) :
 
-function medica-lite_comments( $comment, $args, $depth ) {
+function medica_lite_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
         case 'pingback' :
@@ -85,8 +85,8 @@ endif;
 /**
  *  Post Gallery
  */
-add_filter('post_gallery', 'medica-lite_post_gallery', 10, 2);
-function medica-lite_post_gallery($output, $attr) {
+add_filter('post_gallery', 'medica_lite_post_gallery', 10, 2);
+function medica_lite_post_gallery($output, $attr) {
     global $post;
 
     if (isset($attr['orderby'])) {

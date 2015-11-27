@@ -36,7 +36,7 @@ if ( post_password_required() )
 
         <div class="comments-list cf">
             <?php wp_list_comments( array(
-                    'callback'  => 'medica-lite_comments',
+                    'callback'  => 'medica_lite_comments',
                     'max_depth' => '3'
                 )
             );
