@@ -47,19 +47,19 @@
 								<ul class="cf">
 									<?php
 									if ( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) {
-										echo '<li class="contact-facebook-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) .'" title="'. __( 'Facebook', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="contact-facebook-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) .'" title="'. __( 'Facebook', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
 									if ( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) {
-										echo '<li class="contact-twitter-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) .'" title="'. __( 'Twitter', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="contact-twitter-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) .'" title="'. __( 'Twitter', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
 									if ( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) {
-										echo '<li class="contact-youtube-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) .'" title="'. __( 'YouTube', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="contact-youtube-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) .'" title="'. __( 'YouTube', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
 									if ( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) {
-										echo '<li class="contact-linkedin-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) .'" title="'. __( 'LinkedIn', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="contact-linkedin-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) .'" title="'. __( 'LinkedIn', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 									?>
 								</ul>
@@ -81,7 +81,7 @@
 
 							<?php }
 					} else {
-						echo __( 'No posts found', 'medica_lite' );
+						echo __( 'No posts found', 'medica-lite' );
 					}
 			  	?>
 			  	</div> <!-- /div #contact-content -->

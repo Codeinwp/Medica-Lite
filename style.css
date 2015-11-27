@@ -4,11 +4,11 @@ Theme URI: https://themeisle.com/themes/medica-lite/
 Author: ThemeIsle
 Author URI: https://themeisle.com
 Description: Medica Lite is the best free medical WordPress theme featuring a custom flat business looking homepage with flat feature boxes, latest news, multiple social icons and custom flat blog page.Works best for a doctor business, medical, dentist, health or hospital.
-Version: 1.2.10
+Version: 1.2.11
 License: GNU General Public License version 3
 License URI: license.txt
 Tags: white, light, two-columns, right-sidebar, custom-header, custom-menu, featured-images, rtl-language-support, sticky-post, translation-ready, blue, white, responsive-layout, fixed-layout,theme-options, threaded-comments
-Text Domain: medica_lite
+Text Domain: medica-lite
 Domain Path: /languages/
 
 This theme, like WordPress, is licensed under the GPL.
@@ -705,7 +705,6 @@ body.custom-background {
 /* 1.6 Content */
 #content {
   width: 100%;
-  background: #fff;
   padding: 60px 0px;
   float: left;
 }

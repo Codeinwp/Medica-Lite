@@ -51,7 +51,7 @@
 							} else {
 
 								echo '<ul id="menu-footer">';
-								echo '<li><a href="'. esc_url( home_url() ) .'" title="'. __( 'Home', 'medica_lite' ) .'">'. __( 'Home', 'medica_lite' ) .'</a></li>';
+								echo '<li><a href="'. esc_url( home_url() ) .'" title="'. __( 'Home', 'medica-lite' ) .'">'. __( 'Home', 'medica-lite' ) .'</a></li>';
 								wp_list_pages( array(
 										'title_li'	=> '',
 									)
@@ -83,19 +83,19 @@
 								<ul class="cf">
 									<?php
 									if ( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) {
-										echo '<li class="footer-facebook-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) .'" title="'. __( 'Facebook', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="footer-facebook-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_facebooklink', 'http://www.facebook.com' ) ) .'" title="'. __( 'Facebook', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
 									if ( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) {
-										echo '<li class="footer-twitter-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) .'" title="'. __( 'Twitter', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="footer-twitter-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_twitterlink', 'http://www.twitter.com' ) ) .'" title="'. __( 'Twitter', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
 									if ( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) {
-										echo '<li class="footer-youtube-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) .'" title="'. __( 'YouTube', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="footer-youtube-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_youtubelink', 'http://www.youtube.com' ) ) .'" title="'. __( 'YouTube', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 
 									if ( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) {
-										echo '<li class="footer-linkedin-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) .'" title="'. __( 'LinkedIn', 'medica_lite' ) .'" target="_blank"></a></li>';
+										echo '<li class="footer-linkedin-icon"><a href="'. esc_url( get_theme_mod( 'medica_lite_general_socialslink_linkedinlink', 'http://www.linkedin.com' ) ) .'" title="'. __( 'LinkedIn', 'medica-lite' ) .'" target="_blank"></a></li>';
 									}
 									?>
 								</ul>
@@ -105,7 +105,7 @@
 			</div><!--/div .wrapper-->
 			<div class="copyright-name">
 				<div class="wrapper">
-					<?php echo htmlspecialchars_decode( get_theme_mod( 'medica_lite_general_footer_copyrightentry', 'Copyright' ) ); ?> &copy; <a href="https://themeisle.com/themes/medica-lite/" target="_blank" rel="nofollow"><?php _e( 'Medica Lite', 'medica_lite' ); ?></a> <?php _e('Proudly powered by','medica_lite'); ?> <a href="http://www.wordpress.org" title="WordPress" target="_blank"><?php _e('WordPress','medica_lite'); ?></a>.
+					<?php echo htmlspecialchars_decode( get_theme_mod( 'medica_lite_general_footer_copyrightentry', 'Copyright' ) ); ?> &copy; <a href="https://themeisle.com/themes/medica-lite/" target="_blank" rel="nofollow"><?php _e( 'Medica Lite', 'medica-lite' ); ?></a> <?php _e('Proudly powered by','medica-lite'); ?> <a href="http://www.wordpress.org" title="WordPress" target="_blank"><?php _e('WordPress','medica-lite'); ?></a>.
 				</div><!--/div .wrapper-->
 			</div><!-- /div .copyright-name -->
 		</footer><!--/footer #footer-->

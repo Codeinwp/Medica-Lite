@@ -16,7 +16,7 @@ if ( post_password_required() )
         <div class="comments-template-title">
             <span>
                 <?php
-                    printf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'medica_lite' ),
+                    printf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'medica-lite' ),
                         number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
                 ?>
             </span><!--/span-->
@@ -28,9 +28,9 @@ if ( post_password_required() )
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through? If so, show navigation ?>
         <nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
-            <h1 class="assistive-text"><?php _e( 'Comment navigation', 'medica_lite' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'medica_lite' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'medica_lite' ) ); ?></div>
+            <h1 class="assistive-text"><?php _e( 'Comment navigation', 'medica-lite' ); ?></h1>
+            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'medica-lite' ) ); ?></div>
+            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'medica-lite' ) ); ?></div>
         </nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
         <?php endif; // check for comment navigation ?>
 
@@ -45,9 +45,9 @@ if ( post_password_required() )
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through? If so, show navigation ?>
         <nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation">
-            <h1 class="assistive-text"><?php _e( 'Comment navigation', 'medica_lite' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'medica_lite' ) ); ?></div>
-            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'medica_lite' ) ); ?></div>
+            <h1 class="assistive-text"><?php _e( 'Comment navigation', 'medica-lite' ); ?></h1>
+            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'medica-lite' ) ); ?></div>
+            <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'medica-lite' ) ); ?></div>
         </nav><!-- #comment-nav-below .site-navigation .comment-navigation -->
         <?php endif; // check for comment navigation ?>
 
@@ -57,7 +57,7 @@ if ( post_password_required() )
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
     ?>
-        <p class="nocomments"><?php _e( 'Comments are closed.', 'medica_lite' ); ?></p>
+        <p class="nocomments"><?php _e( 'Comments are closed.', 'medica-lite' ); ?></p>
     <?php endif; ?>
 
         <?php
@@ -89,7 +89,7 @@ if ( post_password_required() )
             );
 
             $comment_textarea = '<textarea placeholder="Your Message... (*)" class="input-textarea" name="comment" aria-required="true"></textarea>';
-            comment_form( array( 'fields' => $fields, 'comment_field' => $comment_textarea, 'id_submit' => 'contact_submit', 'label_submit' => esc_attr__( 'Submit', 'medica_lite' ), 'title_reply' => esc_attr__( 'Leave a comment', 'medica_lite' ), 'title_reply_to' => esc_attr__( 'Leave a comment to %s', 'medica_lite' )) );
+            comment_form( array( 'fields' => $fields, 'comment_field' => $comment_textarea, 'id_submit' => 'contact_submit', 'label_submit' => esc_attr__( 'Submit', 'medica-lite' ), 'title_reply' => esc_attr__( 'Leave a comment', 'medica-lite' ), 'title_reply_to' => esc_attr__( 'Leave a comment to %s', 'medica-lite' )) );
         ?>
 
 </div><!-- #comments .comments-area -->

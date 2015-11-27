@@ -12,7 +12,7 @@ if ( is_dynamic_sidebar( 'general-sidebar' ) ) {
 } else if ( is_user_logged_in() ) {
 
 	echo '<div class="widget">';
-	_e( 'The sidebar is not active.', 'medica_lite' );
+	_e( 'The sidebar is not active.', 'medica-lite' );
 	echo '</div>';
 
 } else {
